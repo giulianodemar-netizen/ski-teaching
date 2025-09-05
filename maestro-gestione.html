@@ -25,7 +25,7 @@
                 <li><a href="maestro-dashboard.html"><i class="fas fa-th-large"></i> Riepilogo</a></li>
                 <li><a href="maestro-gestione.html" class="active"><i class="fas fa-cog"></i> Gestione località</a></li>
                 <li><a href="maestro-prenotazioni.html"><i class="fas fa-calendar-check"></i> Prenotazioni</a></li>
-                <li><a href="maestro-presenze.html"><i class="fas fa-user-check"></i> Presenze</a></li>
+
                 <li><a href="maestro-profilo.html"><i class="fas fa-user-cog"></i> Profilo</a></li>
                 <li><a href="maestro-supporto.html"><i class="fas fa-headset"></i> Supporto</a></li>
                 <li class="divider"></li>
@@ -148,6 +148,25 @@
                                         <button type="button" class="btn-add-time">
                                             <i class="fas fa-plus"></i>
                                         </button>
+                                        <!-- Group Selection Dropdown -->
+                                        <select class="group-select" required>
+                                            <option value="">Seleziona gruppo</option>
+                                            <optgroup label="Bambini">
+                                                <option value="bambini-first-snow">First Snow</option>
+                                                <option value="bambini-beginners">Beginners</option>
+                                                <option value="bambini-intermediate">Intermediate</option>
+                                            </optgroup>
+                                            <optgroup label="Ragazzi">
+                                                <option value="ragazzi-first-snow">First Snow</option>
+                                                <option value="ragazzi-beginners">Beginners</option>
+                                                <option value="ragazzi-intermediate">Intermediate</option>
+                                            </optgroup>
+                                            <optgroup label="Adulti">
+                                                <option value="adulti-first-snow">First Snow</option>
+                                                <option value="adulti-beginners">Beginners</option>
+                                                <option value="adulti-intermediate">Intermediate</option>
+                                            </optgroup>
+                                        </select>
                                         <button type="button" class="btn-add-day">
                                             Aggiungi giorno
                                         </button>
