@@ -218,6 +218,11 @@ function validateForm() {
         return false;
     }
     
+    // Validate group selections for group lessons
+    if (!validateGroupSelections()) {
+        return false;
+    }
+    
     // Validate date range
     const dataInizio = document.getElementById('dataInizio');
     const dataFine = document.getElementById('dataFine');
@@ -226,6 +231,30 @@ function validateForm() {
         if (new Date(dataInizio.value) >= new Date(dataFine.value)) {
             alert('La data di fine deve essere successiva alla data di inizio');
             return false;
+        }
+    }
+    
+    return true;
+}
+
+// Validate group selections for group lessons
+function validateGroupSelections() {
+    const gruppoContainer = document.getElementById('orariGruppoContainer');
+    if (!gruppoContainer) return true;
+    
+    const gruppoOrariGroups = gruppoContainer.querySelectorAll('.orari-group');
+    
+    for (let group of gruppoOrariGroups) {
+        const daySelect = group.querySelector('.giorno-select');
+        const timeInput = group.querySelector('.time-input');
+        const groupSelect = group.querySelector('.group-select');
+        
+        // If day and time are filled, group selection is mandatory
+        if (daySelect && daySelect.value && timeInput && timeInput.value) {
+            if (!groupSelect || !groupSelect.value) {
+                alert('Per ogni orario di lezione di gruppo è obbligatorio selezionare un gruppo target');
+                return false;
+            }
         }
     }
     

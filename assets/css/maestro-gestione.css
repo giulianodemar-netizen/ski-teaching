@@ -253,6 +253,29 @@
     min-width: 120px;
 }
 
+.group-select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 150px;
+}
+
+.group-select:focus {
+    outline: none;
+    border-color: #1380ac;
+}
+
+.group-select optgroup {
+    font-weight: 600;
+    color: #333;
+}
+
 .time-input {
     padding: 8px 12px;
     border: 1px solid #ddd;
