@@ -745,3 +745,103 @@
         height: 30px;
     }
 }
+
+/* ============================
+   GROUP LESSON TYPE STYLES
+   ============================ */
+
+/* Tipologia Gruppo Section */
+.tipologia-gruppo-section {
+    margin-bottom: 15px;
+}
+
+.form-label-small {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 8px;
+}
+
+.form-select,
+.tipologia-gruppo-select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-select:focus,
+.tipologia-gruppo-select:focus {
+    outline: none;
+    border-color: #1380ac;
+    box-shadow: 0 0 0 3px rgba(19, 128, 172, 0.1);
+}
+
+/* Tipologia Badge */
+.tipologia-badge {
+    background-color: #8bc34a;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Time slot error styles */
+.time-slot-error {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.time-slot-error::before {
+    content: '⚠️';
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments for group lesson types */
+@media (max-width: 768px) {
+    .tipologia-badge {
+        font-size: 0.7rem;
+        padding: 2px 8px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tipologia-gruppo-select {
+        font-size: 0.9rem;
+    }
+    
+    .tipologia-badge {
+        display: block;
+        margin: 5px 0;
+        text-align: center;
+        width: fit-content;
+    }
+}
