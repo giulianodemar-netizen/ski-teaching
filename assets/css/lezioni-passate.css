@@ -1,0 +1,688 @@
+/* ============================
+   LEZIONI PASSATE STYLES
+   ============================ */
+
+/* ============================
+   SECTION CONTAINER
+   ============================ */
+.lezioni-passate-section {
+    padding: 60px 0;
+    min-height: calc(100vh - 80px);
+}
+
+.lezioni-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* ============================
+   HEADER
+   ============================ */
+.lezioni-header {
+    background-color: transparent;
+    padding: 30px 0;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.lezioni-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.lezioni-title i {
+    color: #1380ad;
+    font-size: 2.2rem;
+}
+
+.lezioni-subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* ============================
+   TABLE WRAPPER
+   ============================ */
+.lezioni-table-wrapper {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/* ============================
+   TABLE STYLES
+   ============================ */
+.lezioni-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Oswald', sans-serif;
+}
+
+.lezioni-table thead {
+    background-color: #1380ad;
+    color: white;
+}
+
+.lezioni-table thead th {
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.lezioni-table tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+}
+
+.lezioni-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.lezioni-table tbody tr.annullata {
+    opacity: 0.6;
+    background-color: #f8f9fa;
+}
+
+.lezioni-table tbody td {
+    padding: 20px;
+    vertical-align: middle;
+}
+
+/* ============================
+   MAESTRO CELL
+   ============================ */
+.maestro-cell {
+    min-width: 200px;
+}
+
+.maestro-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.maestro-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.maestro-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.maestro-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.maestro-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.maestro-rating {
+    font-size: 0.9rem;
+    color: #ffc107;
+}
+
+/* ============================
+   DATETIME CELL
+   ============================ */
+.datetime-cell {
+    min-width: 150px;
+}
+
+.datetime-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.date {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.time {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 400;
+}
+
+/* ============================
+   LOCATION CELL
+   ============================ */
+.location-cell {
+    min-width: 180px;
+}
+
+.location-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.location-info i {
+    color: #1380ad;
+    font-size: 1rem;
+    margin-top: 2px;
+}
+
+.location-info span {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* ============================
+   ACTION CELL
+   ============================ */
+.action-cell {
+    min-width: 150px;
+    text-align: center;
+}
+
+/* Bottone Valuta */
+.btn-valuta {
+    background-color: transparent;
+    border: 2px solid #1380ad;
+    color: #1380ad;
+    padding: 10px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-valuta:hover {
+    background-color: #1380ad;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Badge Valutato */
+.valutato-badge {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.valutato-text {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.valutato-rating {
+    font-size: 0.9rem;
+    color: #ffc107;
+    font-weight: 500;
+}
+
+/* Badge Annullato */
+.annullato-badge {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ============================
+   EMPTY STATE
+   ============================ */
+.empty-state {
+    background-color: white;
+    padding: 80px 40px;
+    text-align: center;
+    border-radius: 0;
+    margin-top: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.empty-state i {
+    font-size: 4rem;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.empty-state h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.empty-state p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    margin: 0 0 30px 0;
+    font-weight: 400;
+}
+
+.btn-prenota-lezione {
+    background-color: #1380ad;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-prenota-lezione:hover {
+    background-color: #0f5a7a;
+    transform: translateY(-2px);
+}
+
+/* ============================
+   PAGINATION - IMPORTANTE!
+   ============================ */
+.pagination {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    margin: 30px auto !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.pagination-btn {
+    background-color: transparent !important;
+    border: none !important;
+    color: #1380ad !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 10px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    font-size: 1.2rem !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    color: #0f5a7a !important;
+    transform: scale(1.2) !important;
+    background-color: transparent !important;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.3 !important;
+    cursor: not-allowed !important;
+    color: #999 !important;
+}
+
+.pagination-info {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* ============================
+   MODAL VALUTAZIONE
+   ============================ */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background-color: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 0;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.3s ease;
+}
+
+.modal-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-header h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: #333;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.valutazione-maestro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.valutazione-maestro img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.valutazione-maestro h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.rating-section {
+    margin-bottom: 25px;
+}
+
+.rating-section label {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.star {
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.star:hover,
+.star.active {
+    color: #ffc107;
+    transform: scale(1.1);
+}
+
+.rating-value {
+    display: block;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    color: #666;
+}
+
+.comment-section label {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.comment-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+}
+
+.comment-section textarea:focus {
+    outline: none;
+    border-color: #1380ad;
+}
+
+.modal-footer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn-cancel,
+.btn-submit {
+    padding: 10px 25px;
+    border: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-cancel {
+    background-color: transparent;
+    border: 2px solid #ddd;
+    color: #666;
+}
+
+.btn-cancel:hover {
+    background-color: #f8f9fa;
+}
+
+.btn-submit {
+    background-color: #1380ad;
+    color: white;
+    border: 2px solid #1380ad;
+}
+
+.btn-submit:hover {
+    background-color: #0f5a7a;
+    border-color: #0f5a7a;
+}
+
+/* ============================
+   ANIMATIONS
+   ============================ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ============================
+   RESPONSIVE DESIGN
+   ============================ */
+@media (max-width: 768px) {
+    .lezioni-header {
+        padding: 20px 0;
+    }
+    
+    .lezioni-title {
+        font-size: 1.8rem;
+    }
+    
+    .lezioni-title i {
+        font-size: 1.8rem;
+    }
+    
+    .lezioni-subtitle {
+        font-size: 1rem;
+    }
+    
+    /* Tabella responsive */
+    .lezioni-table {
+        font-size: 0.9rem;
+    }
+    
+    .lezioni-table thead {
+        display: none;
+    }
+    
+    .lezioni-table tbody tr {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        padding: 15px;
+    }
+    
+    .lezioni-table tbody td {
+        display: block;
+        padding: 10px 0;
+        text-align: left;
+        border: none;
+    }
+    
+    .lezioni-table tbody td:before {
+        content: attr(data-label);
+        font-weight: 600;
+        display: block;
+        margin-bottom: 5px;
+        color: #1380ad;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+    }
+    
+    .maestro-info {
+        justify-content: flex-start;
+    }
+    
+    .action-cell {
+        text-align: left;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lezioni-container {
+        padding: 0 15px;
+    }
+    
+    .lezioni-header {
+        padding: 15px 0;
+        margin-bottom: 20px;
+    }
+    
+    .lezioni-title {
+        font-size: 1.5rem;
+        gap: 10px;
+    }
+    
+    .pagination {
+        gap: 10px !important;
+    }
+    
+    .pagination-info {
+        font-size: 0.9rem;
+    }
+    
+    .star-rating {
+        gap: 5px;
+    }
+    
+    .star {
+        font-size: 1.5rem;
+    }
+}
