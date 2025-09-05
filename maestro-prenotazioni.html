@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Prenotazioni - Ski Teaching</title>
+    <!-- Head content will be loaded dynamically -->
+</head>
+<body class="maestro-dashboard-page">
+    <!-- Header Include Container -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Maestro Dropdown Menu (positioned after header loads) -->
+        <div class="maestro-dropdown-menu" id="maestroDropdown" style="display: none;">
+            <div class="dropdown-header">
+                <div class="user-avatar">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="user-info">
+                    <p class="user-name">Mario Rossi</p>
+                    <p class="user-role">Maestro di Sci</p>
+                </div>
+            </div>
+            <ul class="dropdown-menu-list">
+                <li><a href="maestro-dashboard.html"><i class="fas fa-th-large"></i> Riepilogo</a></li>
+                <li><a href="maestro-gestione.html"><i class="fas fa-cog"></i> Gestione località</a></li>
+                <li><a href="maestro-prenotazioni.html" class="active"><i class="fas fa-calendar-check"></i> Prenotazioni</a></li>
+                <li><a href="maestro-presenze.html"><i class="fas fa-user-check"></i> Presenze</a></li>
+                <li><a href="maestro-profilo.html"><i class="fas fa-user-cog"></i> Profilo</a></li>
+                <li><a href="maestro-supporto.html"><i class="fas fa-headset"></i> Supporto</a></li>
+                <li class="divider"></li>
+                <li><a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Esci</a></li>
+            </ul>
+        </div>
+
+        <!-- Prenotazioni Section -->
+        <section class="maestro-prenotazioni-section">
+            <div class="prenotazioni-container">
+                
+                <!-- Prenotazioni Header -->
+                <div class="prenotazioni-header">
+                    <div class="header-content">
+                        <h1 class="prenotazioni-title">PRENOTAZIONI</h1>
+                        <div class="prenotazioni-filter-container">
+                            <button class="btn-prenotazioni-filter">
+                                <i class="fas fa-calendar-day"></i>
+                                <span class="filter-text">PRENOTAZIONI DI OGGI</span>
+                                <i class="fas fa-chevron-down arrow-icon"></i>
+                            </button>
+                            <div class="prenotazioni-dropdown" style="display: none;">
+                                <ul>
+                                    <li><a href="#" data-filter="oggi" class="active">
+                                        <i class="fas fa-calendar-day"></i> Prenotazioni di Oggi
+                                    </a></li>
+                                    <li><a href="#" data-filter="domani">
+                                        <i class="fas fa-calendar-check"></i> Prenotazioni di Domani
+                                    </a></li>
+                                    <li><a href="#" data-filter="settimana">
+                                        <i class="fas fa-calendar-week"></i> Prenotazioni della Settimana
+                                    </a></li>
+                                    <li><a href="#" data-filter="mese">
+                                        <i class="fas fa-calendar-alt"></i> Prenotazioni del Mese
+                                    </a></li>
+                                    <li><a href="#" data-filter="tutte">
+                                        <i class="fas fa-calendar"></i> Tutte le Prenotazioni
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prenotazioni Content -->
+                <div class="prenotazioni-content">
+                    
+                    <!-- Prossime Lezioni Confermate -->
+                    <div class="prenotazioni-section confermate">
+                        <div class="section-header verde">
+                            <h2>PROSSIME LEZIONI CONFERMATE</h2>
+                        </div>
+                        
+                        <div class="prenotazioni-list">
+                            <!-- Prenotazione 1 -->
+                            <div class="prenotazione-card">
+                                <div class="allievo-info">
+                                    <div class="allievo-avatar">
+                                        <img src="assets/img/avatar-1.jpg" alt="Paolo Meyer">
+                                    </div>
+                                    <div class="allievo-details">
+                                        <h3 class="allievo-nome">PALLADNEVE10</h3>
+                                    </div>
+                                </div>
+                                <div class="prenotazione-datetime">
+                                    <span class="data">12 FEBBRAIO</span>
+                                    <span class="ora">ORE 13:30</span>
+                                </div>
+                                <div class="prenotazione-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <span class="location-name">Seggiovia Pizzalto</span>
+                                        <span class="location-city">Roccaraso</span>
+                                    </div>
+                                </div>
+                                <div class="prenotazione-type">
+                                    <span class="type-label">LEZIONE PRIVATA</span>
+                                </div>
+                                <div class="prenotazione-actions">
+                                    <button class="btn-options">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Prenotazione 2 -->
+                            <div class="prenotazione-card">
+                                <div class="allievo-info">
+                                    <div class="allievo-avatar gruppo">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="allievo-details">
+                                        <h3 class="allievo-nome">GRUPPO POMERIGGIO</h3>
+                                    </div>
+                                </div>
+                                <div class="prenotazione-datetime">
+                                    <span class="data">12 FEBBRAIO</span>
+                                    <span class="ora">ORE 15:30</span>
+                                </div>
+                                <div class="prenotazione-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <span class="location-name">Seggiovia Pizzalto</span>
+                                        <span class="location-city">Roccaraso</span>
+                                    </div>
+                                </div>
+                                <div class="prenotazione-type">
+                                    <span class="type-label gruppo">LEZIONE DI GRUPPO</span>
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <div class="prenotazione-actions">
+                                    <button class="btn-options">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- In Attesa -->
+                    <div class="prenotazioni-section in-attesa">
+                        <div class="section-header arancione">
+                            <h2>IN ATTESA</h2>
+                        </div>
+                        
+                        <div class="prenotazioni-list">
+                            <!-- Prenotazione In Attesa 1 -->
+                            <div class="prenotazione-card">
+                                <div class="allievo-info">
+                                    <div class="allievo-avatar">
+                                        <img src="assets/img/avatar-2.jpg" alt="Emma Nadia">
+                                    </div>
+                                    <div class="allievo-details">
+                                        <h3 class="allievo-nome">EMMANADIA</h3>
+                                    </div>
+                                </div>
+                                <div class="prenotazione-datetime">
+                                    <span class="data">11 FEBBRAIO</span>
+                                    <span class="ora">ORE 13:30</span>
+                                </div>
+                                <div class="prenotazione-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <span class="location-name">Seggiovia Pizzalto</span>
+                                        <span class="location-city">Roccaraso</span>
+                                    </div>
+                                </div>
+                                <div class="prenotazione-type">
+                                    <span class="type-label">LEZIONE PRIVATA</span>
+                                </div>
+                                <div class="prenotazione-buttons">
+                                    <button class="btn-approva-prenotazione">Approva</button>
+                                    <button class="btn-rifiuta-prenotazione">Rifiuta</button>
+                                </div>
+                                <div class="prenotazione-actions">
+                                    <button class="btn-options-attesa">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <!-- Sottomenu per prenotazioni in attesa -->
+                                    <div class="prenotazione-submenu" style="display: none;">
+                                        <div class="submenu-header">
+                                            <span>Proponi di riprogrammare</span>
+                                        </div>
+                                        <a href="#" class="submenu-item">Contatta</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Prenotazione In Attesa 2 -->
+                            <div class="prenotazione-card">
+                                <div class="allievo-info">
+                                    <div class="allievo-avatar">
+                                        <img src="assets/img/avatar-3.jpg" alt="Powski">
+                                    </div>
+                                    <div class="allievo-details">
+                                        <h3 class="allievo-nome">POWERSKI</h3>
+                                    </div>
+                                </div>
+                                <div class="prenotazione-datetime">
+                                    <span class="data">10 FEBBRAIO</span>
+                                    <span class="ora">ORE 13:30</span>
+                                </div>
+                                <div class="prenotazione-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <span class="location-name">Seggiovia Pizzalto</span>
+                                        <span class="location-city">Roccaraso</span>
+                                    </div>
+                                </div>
+                                <div class="prenotazione-type">
+                                    <span class="type-label gruppo">LEZIONE DI GRUPPO</span>
+                                </div>
+                                <div class="prenotazione-buttons">
+                                    <button class="btn-approva-prenotazione">Approva</button>
+                                    <button class="btn-rifiuta-prenotazione">Rifiuta</button>
+                                </div>
+                                <div class="prenotazione-actions">
+                                    <button class="btn-options-attesa">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <!-- Sottomenu per prenotazioni in attesa -->
+                                    <div class="prenotazione-submenu" style="display: none;">
+                                        <div class="submenu-header">
+                                            <span>Proponi di riprogrammare</span>
+                                        </div>
+                                        <a href="#" class="submenu-item">Contatta</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rifiutate -->
+                    <div class="prenotazioni-section rifiutate">
+                        <div class="section-header rosso">
+                            <h2>RIFIUTATE</h2>
+                        </div>
+                        
+                        <div class="prenotazioni-list">
+                            <!-- Prenotazione Rifiutata -->
+                            <div class="prenotazione-card rifiutata">
+                                <div class="allievo-info">
+                                    <div class="allievo-avatar">
+                                        <img src="assets/img/avatar-3.jpg" alt="Powski">
+                                    </div>
+                                    <div class="allievo-details">
+                                        <h3 class="allievo-nome">POWERSKI</h3>
+                                    </div>
+                                </div>
+                                <div class="prenotazione-datetime">
+                                    <span class="data">9 FEBBRAIO</span>
+                                    <span class="ora">ORE 11:30</span>
+                                </div>
+                                <div class="prenotazione-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <span class="location-name">Seggiovia Pizzalto</span>
+                                        <span class="location-city">Roccaraso</span>
+                                    </div>
+                                </div>
+                                <div class="prenotazione-type">
+                                    <span class="type-label">LEZIONE PRIVATA</span>
+                                </div>
+                                <div class="prenotazione-actions">
+                                    <!-- No actions for rejected -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Include Container -->
+    <div id="footer-container"></div>
+
+    <!-- Include CSS generale + CSS specifico pagina -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/maestro-dashboard.css">
+    <link rel="stylesheet" href="assets/css/maestro-prenotazioni.css">
+    
+    <!-- Include JavaScript -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/maestro-prenotazioni.js"></script>
+</body>
+</html>

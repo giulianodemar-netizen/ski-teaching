@@ -1,0 +1,1169 @@
+/* ============================
+   MAESTRO DASHBOARD STYLES
+   ============================ */
+
+/* Background color per pagina maestro */
+.maestro-dashboard-page {
+    background-color: #edf8fc !important;
+    min-height: 100vh;
+}
+
+/* Header normale (non trasparente) */
+.maestro-dashboard-page .header {
+    background-color: white !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ============================
+   MAESTRO DROPDOWN MENU
+   ============================ */
+
+.maestro-dropdown-menu {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    width: 280px;
+    z-index: 999;
+    animation: slideDown 0.3s ease-out;
+}
+
+.maestro-dropdown-menu .dropdown-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.maestro-dropdown-menu .user-avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #1380ad;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.maestro-dropdown-menu .user-avatar i {
+    font-size: 2rem;
+    color: white;
+}
+
+.maestro-dropdown-menu .user-info {
+    flex: 1;
+}
+
+.maestro-dropdown-menu .user-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.maestro-dropdown-menu .user-role {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.85rem;
+    color: #1380ad;
+    margin: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.maestro-dropdown-menu .dropdown-menu-list {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.maestro-dropdown-menu .dropdown-menu-list li {
+    margin: 0;
+}
+
+.maestro-dropdown-menu .dropdown-menu-list li.divider {
+    height: 1px;
+    background-color: #eee;
+    margin: 10px 0;
+}
+
+.maestro-dropdown-menu .dropdown-menu-list a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #333;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.maestro-dropdown-menu .dropdown-menu-list a:hover {
+    background-color: #f5f5f5;
+}
+
+.maestro-dropdown-menu .dropdown-menu-list a.active {
+    background-color: rgba(19, 128, 173, 0.1);
+    color: #1380ad;
+}
+
+.maestro-dropdown-menu .dropdown-menu-list a i {
+    width: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.maestro-dropdown-menu .dropdown-menu-list a.logout {
+    color: #dc3545;
+}
+
+.maestro-dropdown-menu .dropdown-menu-list a.logout:hover {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+/* ============================
+   DASHBOARD SECTION
+   ============================ */
+
+.maestro-dashboard-section {
+    padding: 60px 0;
+    min-height: calc(100vh - 80px);
+}
+
+.dashboard-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    background-color: transparent;
+    padding: 30px 0;
+    margin-bottom: 40px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.title-highlight {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1380ad;
+    display: block;
+}
+
+/* Lezioni Filter Container */
+.lezioni-filter-container {
+    position: relative;
+}
+
+.btn-lezioni-filter {
+    background-color: transparent;
+    color: #1380ad;
+    border: 2px solid #1380ad;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.btn-lezioni-filter:hover {
+    background-color: #1380ad;
+    color: white;
+}
+
+.btn-lezioni-filter i {
+    font-size: 1.1rem;
+}
+
+.btn-lezioni-filter .arrow-icon {
+    margin-left: 5px;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-lezioni-filter.active .arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* Lezioni Dropdown */
+.lezioni-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    min-width: 250px;
+    overflow: hidden;
+}
+
+.lezioni-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lezioni-dropdown li {
+    margin: 0;
+}
+
+.lezioni-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #333;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.lezioni-dropdown a:hover {
+    background-color: #f5f5f5;
+}
+
+.lezioni-dropdown a.active {
+    background-color: rgba(19, 128, 173, 0.1);
+    color: #1380ad;
+}
+
+.lezioni-dropdown a i {
+    width: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: #1380ad;
+}
+
+/* ============================
+   CONTENT LAYOUT - SINGLE COLUMN
+   ============================ */
+
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ============================
+   LEZIONI CONTAINER
+   ============================ */
+
+.lezioni-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.lezioni-section {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Section Headers */
+.section-header {
+    padding: 15px 25px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+}
+
+.section-header.verde {
+    background-color: #8bc34a;
+}
+
+.section-header.arancione {
+    background-color: #ffa726;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Lezioni List */
+.lezioni-list {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Lezione Card */
+.lezione-card {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr auto;
+    gap: 20px;
+    align-items: center;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.lezione-card:hover {
+    background-color: #e9ecef;
+    transform: translateX(5px);
+}
+
+/* Allievo Info */
+.allievo-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.allievo-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: #1380ad;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.allievo-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.allievo-avatar.gruppo {
+    background-color: #8bc34a;
+}
+
+.allievo-avatar i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.allievo-details {
+    flex: 1;
+}
+
+.allievo-nome {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+}
+
+.lezione-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.data-ora {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 400;
+}
+
+/* Lezione Location */
+.lezione-location {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.lezione-location i {
+    color: #1380ad;
+    margin-top: 2px;
+}
+
+/* Lezione Type */
+.lezione-type {
+    display: flex;
+    align-items: center;
+}
+
+.badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge.privata {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.badge.gruppo {
+    background-color: #e8f5e9;
+    color: #388e3c;
+}
+
+/* Lezione Actions */
+.lezione-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-options {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-options:hover {
+    color: #1380ad;
+    background-color: rgba(19, 128, 173, 0.1);
+    border-radius: 50%;
+}
+
+.btn-approva,
+.btn-rifiuta {
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-approva {
+    background-color: #1380ad;
+    color: white;
+    border: 2px solid #1380ad;
+}
+
+.btn-approva:hover {
+    background-color: #0f5a7a;
+    transform: translateY(-2px);
+}
+
+.btn-rifiuta {
+    background-color: white;
+    color: #666;
+    border: 2px solid #ddd;
+}
+
+.btn-rifiuta:hover {
+    border-color: #dc3545;
+    color: #dc3545;
+    transform: translateY(-2px);
+}
+
+/* ============================
+   LOCALITÀ CONTAINER
+   ============================ */
+
+.localita-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.localita-section {
+    background-color: transparent;
+}
+
+.localita-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.localita-header h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.link-crea-nuovo {
+    color: #1380ad;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.link-crea-nuovo:hover {
+    text-decoration: underline;
+}
+
+/* Località List */
+.localita-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Località Card */
+.localita-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.localita-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* Località Card Inactive State */
+.localita-card.inactive {
+    opacity: 0.85;
+}
+
+.localita-card.inactive .localita-content {
+    background-color: #f8f9fa;
+}
+
+/* Località Header */
+.localita-header-bar {
+    display: flex;
+    align-items: stretch;
+    height: 55px;
+}
+
+.localita-title {
+    background-color: #17a2b8;
+    color: white;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+/* Title for inactive card */
+.localita-card.inactive .localita-title {
+    background-color: #17a2b8;
+}
+
+.localita-title h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Status Badge */
+.localita-status {
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: white;
+    position: relative;
+    padding: 0 50px 0 20px;
+}
+
+.localita-status.attivo {
+    background-color: #8bc34a;
+}
+
+.localita-status.non-attivo {
+    background-color: #dc3545;
+}
+
+.localita-status > i {
+    font-size: 1rem;
+    margin-left: 8px;
+}
+
+/* Modifica Button */
+.btn-modifica-localita {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 5px;
+    transition: opacity 0.3s ease;
+}
+
+.btn-modifica-localita:hover {
+    opacity: 0.8;
+}
+
+/* Località Content */
+.localita-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Top Info Row - Località, Giorni e Stile */
+.localita-info-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.localita-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.localita-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.localita-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Double icon for Sci e Snowboard */
+.localita-icon.double-icon {
+    width: auto;
+    display: flex;
+    gap: 5px;
+}
+
+.localita-icon.double-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.localita-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.localita-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.localita-value {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #17a2b8;
+    text-decoration: none;
+    margin: 0;
+}
+
+.localita-value:hover {
+    text-decoration: underline;
+}
+
+.giorni-value {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.stile-value {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Orari Section */
+.orari-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.orari-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.orari-label .visual-helper {
+    color: #17a2b8;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.orari-label .visual-helper:hover {
+    text-decoration: underline;
+}
+
+/* Orari Grid - Display block rispetto al label */
+.orari-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+
+/* Giorno Orari - Uno a fianco all'altro */
+.giorno-orari {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.giorno-nome {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.orari-list {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Orari - Solo visualizzazione, no interazione */
+.orario {
+    padding: 4px 10px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #333;
+    cursor: default;
+}
+
+.orario.highlight {
+    background-color: #ffa726;
+    color: white;
+}
+
+/* Prezzi Row */
+.prezzi-row {
+    padding-top: 20px;
+}
+
+/* Prezzi Row nelle card - SENZA BORDI */
+.localita-card .prezzi-row {
+    border-top: 1px solid #eee;
+    border-bottom: none;
+}
+
+.prezzi-list {
+    display: flex;
+    gap: 40px;
+}
+
+.prezzo-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.prezzo-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.prezzo-value {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Attiva Section */
+.attiva-section {
+    border-top: 1px solid #dee2e6;
+    padding-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-attiva-localita {
+    background-color: white;
+    color: #28a745;
+    border: 2px solid #28a745;
+    padding: 10px 25px;
+    border-radius: 4px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-attiva-localita:hover {
+    background-color: #28a745;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.btn-attiva-localita i {
+    font-size: 0.9rem;
+}
+
+/* Disattiva Section */
+.disattiva-section {
+    border-top: 1px solid #dee2e6;
+    padding-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-disattiva-localita {
+    background-color: white;
+    color: #dc3545;
+    border: 2px solid #dc3545;
+    padding: 10px 25px;
+    border-radius: 4px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-disattiva-localita:hover {
+    background-color: #dc3545;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.btn-disattiva-localita i {
+    font-size: 0.9rem;
+}
+
+/* Periodo Attivazione Bottom */
+.periodo-attivazione-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 15px;
+    padding-top: 15px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.periodo-attivazione-bottom i {
+    color: #1380ac;
+}
+
+/* ============================
+   ANIMATIONS
+   ============================ */
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================
+   RESPONSIVE DESIGN
+   ============================ */
+
+@media (max-width: 1200px) {
+    .dashboard-container {
+        max-width: 100%;
+    }
+    
+    .lezione-card {
+        grid-template-columns: 2fr 1fr 1fr auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .maestro-dropdown-menu {
+        right: 10px;
+        width: 260px;
+    }
+    
+    .dashboard-header {
+        padding: 20px 0;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    
+    .dashboard-title {
+        font-size: 1.5rem;
+    }
+    
+    .title-highlight {
+        font-size: 2.2rem;
+    }
+    
+    .btn-lezioni-filter {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .lezioni-dropdown {
+        left: 0;
+        right: 0;
+    }
+    
+    .dashboard-content {
+        gap: 30px;
+    }
+    
+    .lezione-card {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .localita-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .localita-list {
+        gap: 20px;
+    }
+    
+    .localita-header-bar {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .localita-title {
+        padding: 15px 20px;
+    }
+    
+    .localita-status {
+        width: 100%;
+        padding: 10px 50px 10px 20px;
+        position: relative;
+    }
+    
+    .btn-modifica-localita {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .localita-info-top {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .orari-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .prezzi-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn-attiva-localita {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .btn-disattiva-localita {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .maestro-dashboard-section {
+        padding: 40px 0;
+    }
+    
+    .dashboard-container {
+        padding: 0 15px;
+    }
+    
+    .dashboard-title {
+        font-size: 1.3rem;
+    }
+    
+    .title-highlight {
+        font-size: 1.8rem;
+    }
+    
+    .dashboard-content {
+        gap: 25px;
+    }
+    
+    .section-header {
+        padding: 12px 20px;
+    }
+    
+    .section-header h2 {
+        font-size: 1rem;
+    }
+    
+    .lezioni-list {
+        padding: 15px;
+        gap: 12px;
+    }
+    
+    .lezione-card {
+        padding: 12px;
+    }
+    
+    .allievo-avatar {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .allievo-nome {
+        font-size: 1rem;
+    }
+    
+    .data-ora {
+        font-size: 0.85rem;
+    }
+    
+    .localita-header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .localita-list {
+        gap: 15px;
+    }
+    
+    .localita-title h3 {
+        font-size: 1.1rem;
+    }
+    
+    .localita-content {
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .prezzo-value {
+        font-size: 1.1rem;
+    }
+    
+    .btn-lezioni-filter {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .lezioni-dropdown {
+        min-width: 200px;
+    }
+    
+    .lezioni-dropdown a {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+}

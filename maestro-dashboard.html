@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Dashboard Maestro - Ski Teaching</title>
+    <!-- Head content will be loaded dynamically -->
+</head>
+<body class="maestro-dashboard-page">
+    <!-- Header Include Container -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Maestro Dropdown Menu (positioned after header loads) -->
+        <div class="maestro-dropdown-menu" id="maestroDropdown" style="display: none;">
+            <div class="dropdown-header">
+                <div class="user-avatar">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="user-info">
+                    <p class="user-name">Mario Rossi</p>
+                    <p class="user-role">Maestro di Sci</p>
+                </div>
+            </div>
+            <ul class="dropdown-menu-list">
+                <li><a href="maestro-dashboard.html" class="active"><i class="fas fa-th-large"></i> Riepilogo</a></li>
+                <li><a href="maestro-gestione.html"><i class="fas fa-cog"></i> Gestione località</a></li>
+                <li><a href="maestro-prenotazioni.html"><i class="fas fa-calendar-check"></i> Prenotazioni</a></li>
+                <li><a href="maestro-presenze.html"><i class="fas fa-user-check"></i> Presenze</a></li>
+                <li><a href="maestro-profilo.html"><i class="fas fa-user-cog"></i> Profilo</a></li>
+                <li><a href="maestro-supporto.html"><i class="fas fa-headset"></i> Supporto</a></li>
+                <li class="divider"></li>
+                <li><a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Esci</a></li>
+            </ul>
+        </div>
+
+        <!-- Dashboard Section -->
+        <section class="maestro-dashboard-section">
+            <div class="dashboard-container">
+                
+                <!-- Dashboard Header -->
+                <div class="dashboard-header">
+                    <div class="header-content">
+                        <h1 class="dashboard-title">
+                            SCHEDA MAESTRO<br>
+                            <span class="title-highlight">RIEPILOGO</span>
+                        </h1>
+                        <div class="lezioni-filter-container">
+                            <button class="btn-lezioni-filter">
+                                <i class="fas fa-calendar-day"></i>
+                                <span class="filter-text">LEZIONI DI OGGI</span>
+                                <i class="fas fa-chevron-down arrow-icon"></i>
+                            </button>
+                            <div class="lezioni-dropdown" style="display: none;">
+                                <ul>
+                                    <li><a href="#" data-filter="oggi" class="active">
+                                        <i class="fas fa-calendar-day"></i> Lezioni di Oggi
+                                    </a></li>
+                                    <li><a href="#" data-filter="domani">
+                                        <i class="fas fa-calendar-check"></i> Lezioni di Domani
+                                    </a></li>
+                                    <li><a href="#" data-filter="settimana">
+                                        <i class="fas fa-calendar-week"></i> Lezioni della Settimana
+                                    </a></li>
+                                    <li><a href="#" data-filter="mese">
+                                        <i class="fas fa-calendar-alt"></i> Lezioni del Mese
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Content - Single Column -->
+                <div class="dashboard-content">
+                    
+                    <!-- Sezione Lezioni -->
+                    <div class="lezioni-container">
+                        
+                        <!-- Prossime Lezioni Confermate -->
+                        <div class="lezioni-section confermate">
+                            <div class="section-header verde">
+                                <h2>PROSSIME LEZIONI CONFERMATE</h2>
+                            </div>
+                            
+                            <div class="lezioni-list">
+                                <!-- Lezione 1 -->
+                                <div class="lezione-card">
+                                    <div class="allievo-info">
+                                        <div class="allievo-avatar">
+                                            <img src="assets/img/avatar-1.jpg" alt="Paolo Meyer">
+                                        </div>
+                                        <div class="allievo-details">
+                                            <h3 class="allievo-nome">PAOLO MEYER</h3>
+                                            <div class="lezione-info">
+                                                <span class="data-ora">12 FEBBRAIO ORE 13:30</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lezione-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Seggiovia Pizzalto<br>Roccaraso</span>
+                                    </div>
+                                    <div class="lezione-type">
+                                        <span class="badge privata">LEZIONE PRIVATA</span>
+                                    </div>
+                                    <div class="lezione-actions">
+                                        <button class="btn-options">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Lezione 2 -->
+                                <div class="lezione-card">
+                                    <div class="allievo-info">
+                                        <div class="allievo-avatar gruppo">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        <div class="allievo-details">
+                                            <h3 class="allievo-nome">GRUPPO POMERIGGIO</h3>
+                                            <div class="lezione-info">
+                                                <span class="data-ora">12 FEBBRAIO ORE 15:30</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lezione-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Seggiovia Pizzalto<br>Roccaraso</span>
+                                    </div>
+                                    <div class="lezione-type">
+                                        <span class="badge gruppo">LEZIONE DI GRUPPO</span>
+                                    </div>
+                                    <div class="lezione-actions">
+                                        <button class="btn-options">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lezioni In Attesa -->
+                        <div class="lezioni-section in-attesa">
+                            <div class="section-header arancione">
+                                <h2>IN ATTESA</h2>
+                            </div>
+                            
+                            <div class="lezioni-list">
+                                <!-- Lezione In Attesa -->
+                                <div class="lezione-card">
+                                    <div class="allievo-info">
+                                        <div class="allievo-avatar">
+                                            <img src="assets/img/avatar-2.jpg" alt="Emma Garcia">
+                                        </div>
+                                        <div class="allievo-details">
+                                            <h3 class="allievo-nome">EMMA GARCIA</h3>
+                                            <div class="lezione-info">
+                                                <span class="data-ora">12 FEBBRAIO ORE 13:30</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lezione-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Seggiovia Pizzalto<br>Roccaraso</span>
+                                    </div>
+                                    <div class="lezione-type">
+                                        <span class="badge privata">LEZIONE PRIVATA</span>
+                                    </div>
+                                    <div class="lezione-actions">
+                                        <button class="btn-approva">Approva</button>
+                                        <button class="btn-rifiuta">Rifiuta</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sezione Località e Orari -->
+                    <div class="localita-container">
+                        <div class="localita-section">
+                            <div class="localita-header">
+                                <h2>LOCALITÀ E ORARI</h2>
+                                <a href="#" class="link-crea-nuovo">Crea nuovo</a>
+                            </div>
+                            
+                            <div class="localita-list">
+                                <!-- Località Card 1 - ATTIVA -->
+                                <div class="localita-card">
+                                    <div class="localita-header-bar">
+                                        <div class="localita-title">
+                                            <h3>ROCCARASO FEBBRAIO</h3>
+                                        </div>
+                                        <div class="localita-status attivo">
+                                            ATTIVO
+                                            <i class="fas fa-check-square"></i>
+                                            <button class="btn-modifica-localita" title="Modifica località">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="localita-content">
+                                        <!-- Top Info Row - Località, Giorni e Stile -->
+                                        <div class="localita-info-top">
+                                            <!-- Località -->
+                                            <div class="localita-info-item">
+                                                <div class="localita-icon">
+                                                    <img src="assets/img/Montagna.png" alt="Località">
+                                                </div>
+                                                <div class="localita-details">
+                                                    <p class="localita-label">LOCALITÀ</p>
+                                                    <a href="#" class="localita-value">ROCCARASO</a>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Giorni -->
+                                            <div class="localita-info-item">
+                                                <div class="localita-details">
+                                                    <p class="localita-label">GIORNI</p>
+                                                    <div class="giorni-value">
+                                                        Lunedì · Martedì · Venerdì
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Stile -->
+                                            <div class="localita-info-item">
+                                                <div class="localita-icon">
+                                                    <img src="assets/img/Sci_acceso.png" alt="Sci">
+                                                </div>
+                                                <div class="localita-details">
+                                                    <p class="localita-label">STILE</p>
+                                                    <div class="stile-value">Sci</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Orari Lezioni Private -->
+                                        <div class="orari-section">
+                                            <div class="orari-label">
+                                                ORARI PER LEZIONI PRIVATE
+                                                <span class="visual-helper">Visualizza</span>
+                                            </div>
+                                            <div class="orari-grid">
+                                                <div class="giorno-orari">
+                                                    <span class="giorno-nome">LUNEDÌ</span>
+                                                    <div class="orari-list">
+                                                        <span class="orario">11:00</span>
+                                                        <span class="orario">14:00</span>
+                                                        <span class="orario highlight">17:00</span>
+                                                        <span class="orario">18:00</span>
+                                                    </div>
+                                                </div>
+                                                <div class="giorno-orari">
+                                                    <span class="giorno-nome">MARTEDÌ</span>
+                                                    <div class="orari-list">
+                                                        <span class="orario">11:00</span>
+                                                        <span class="orario">14:00</span>
+                                                        <span class="orario highlight">17:00</span>
+                                                        <span class="orario">18:00</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Orari Lezioni Collettive -->
+                                        <div class="orari-section">
+                                            <div class="orari-label">
+                                                ORARI PER LEZIONI COLLETTIVE
+                                                <span class="visual-helper">Visualizza</span>
+                                            </div>
+                                            <div class="orari-grid">
+                                                <div class="giorno-orari">
+                                                    <span class="giorno-nome">VENERDÌ</span>
+                                                    <div class="orari-list">
+                                                        <span class="orario">10:00</span>
+                                                        <span class="orario">13:00</span>
+                                                        <span class="orario highlight">14:00</span>
+                                                        <span class="orario">18:00</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Prezzi -->
+                                        <div class="prezzi-row">
+                                            <div class="orari-label">PREZZI</div>
+                                            <div class="prezzi-list">
+                                                <div class="prezzo-item">
+                                                    <span class="prezzo-label">LEZIONI PRIVATE</span>
+                                                    <span class="prezzo-value">50€/h</span>
+                                                </div>
+                                                <div class="prezzo-item">
+                                                    <span class="prezzo-label">LEZIONI COLLETTIVE</span>
+                                                    <span class="prezzo-value">20€/h</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Disattiva Button per località attiva -->
+                                        <div class="disattiva-section">
+                                            <button class="btn-disattiva-localita">
+                                                <i class="fas fa-power-off"></i>
+                                                DISATTIVA
+                                            </button>
+                                        </div>
+                                        
+                                        <!-- Periodo Attivazione in basso a destra -->
+                                        <div class="periodo-attivazione-bottom">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>1 Feb 2025 - 28 Feb 2025</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Località Card 2 - NON ATTIVA -->
+                                <div class="localita-card inactive">
+                                    <div class="localita-header-bar">
+                                        <div class="localita-title">
+                                            <h3>CAMPO FELICE MARZO</h3>
+                                        </div>
+                                        <div class="localita-status non-attivo">
+                                            NON ATTIVO
+                                            <i class="fas fa-times-square"></i>
+                                            <button class="btn-modifica-localita" title="Modifica località">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="localita-content">
+                                        <!-- Top Info Row - Località, Giorni e Stile -->
+                                        <div class="localita-info-top">
+                                            <!-- Località -->
+                                            <div class="localita-info-item">
+                                                <div class="localita-icon">
+                                                    <img src="assets/img/Montagna.png" alt="Località">
+                                                </div>
+                                                <div class="localita-details">
+                                                    <p class="localita-label">LOCALITÀ</p>
+                                                    <a href="#" class="localita-value">CAMPO FELICE</a>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Giorni -->
+                                            <div class="localita-info-item">
+                                                <div class="localita-details">
+                                                    <p class="localita-label">GIORNI</p>
+                                                    <div class="giorni-value">
+                                                        Sabato · Domenica
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Stile -->
+                                            <div class="localita-info-item">
+                                                <div class="localita-icon">
+                                                    <img src="assets/img/snowboard_acceso.png" alt="Snowboard">
+                                                </div>
+                                                <div class="localita-details">
+                                                    <p class="localita-label">STILE</p>
+                                                    <div class="stile-value">Snowboard</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Orari Lezioni Private -->
+                                        <div class="orari-section">
+                                            <div class="orari-label">
+                                                ORARI PER LEZIONI PRIVATE
+                                                <span class="visual-helper">Visualizza</span>
+                                            </div>
+                                            <div class="orari-grid">
+                                                <div class="giorno-orari">
+                                                    <span class="giorno-nome">SABATO</span>
+                                                    <div class="orari-list">
+                                                        <span class="orario">09:00</span>
+                                                        <span class="orario">11:00</span>
+                                                        <span class="orario">14:00</span>
+                                                        <span class="orario">16:00</span>
+                                                    </div>
+                                                </div>
+                                                <div class="giorno-orari">
+                                                    <span class="giorno-nome">DOMENICA</span>
+                                                    <div class="orari-list">
+                                                        <span class="orario">09:00</span>
+                                                        <span class="orario">11:00</span>
+                                                        <span class="orario">14:00</span>
+                                                        <span class="orario">16:00</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Prezzi -->
+                                        <div class="prezzi-row">
+                                            <div class="orari-label">PREZZI</div>
+                                            <div class="prezzi-list">
+                                                <div class="prezzo-item">
+                                                    <span class="prezzo-label">LEZIONI PRIVATE</span>
+                                                    <span class="prezzo-value">60€/h</span>
+                                                </div>
+                                                <div class="prezzo-item">
+                                                    <span class="prezzo-label">LEZIONI COLLETTIVE</span>
+                                                    <span class="prezzo-value">25€/h</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Attiva Button -->
+                                        <div class="attiva-section">
+                                            <button class="btn-attiva-localita">
+                                                <i class="fas fa-power-off"></i>
+                                                RENDI ATTIVA
+                                            </button>
+                                        </div>
+                                        
+                                        <!-- Periodo Attivazione in basso a destra -->
+                                        <div class="periodo-attivazione-bottom">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>1 Mar 2025 - 31 Mar 2025</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Include Container -->
+    <div id="footer-container"></div>
+
+    <!-- Include CSS generale + CSS specifico pagina -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/maestro-dashboard.css">
+    
+    <!-- Include JavaScript -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/maestro-dashboard.js"></script>
+</body>
+</html>

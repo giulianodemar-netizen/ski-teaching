@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Contatti - Ski Teaching</title>
+    <!-- Head content will be loaded dynamically -->
+</head>
+<body class="contatti-page">
+    <!-- Header Include Container -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Contatti Section -->
+        <section class="contatti-section">
+            <div class="contatti-container">
+                <!-- Colonna Sinistra - Immagine -->
+                <div class="contatti-image-col">
+                    <div class="contatti-image">
+                        <img src="assets/img/img-contatti-desk.jpg" alt="Contatti Ski Teaching">
+                    </div>
+                    <!-- Scritta CONTATTACI ruotata -->
+                    <div class="contattaci-text">
+                        <span>CONTATTACI</span>
+                    </div>
+                </div>
+
+                <!-- Colonna Destra - Form -->
+                <div class="contatti-form-col">
+                    <div class="contatti-form-content">
+                        <!-- Sottotitolo -->
+                        <div class="contatti-subtitle">
+                            <p>Siamo a tua disposizione per qualsiasi dubbio!</p>
+                        </div>
+
+                        <!-- Form -->
+                        <form class="contact-form" id="contact-form">
+                            <!-- Prima riga: Nome e Email -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" id="nome" name="nome" placeholder="Nome e cognome" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" placeholder="Indirizzo mail" required>
+                                </div>
+                            </div>
+
+                            <!-- Seconda riga: Telefono e Tipo lezione -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="tel" id="telefono" name="telefono" placeholder="Numero di telefono">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="tipo-lezione" name="tipo-lezione" placeholder="Che tipo di lezione cerchi?">
+                                </div>
+                            </div>
+
+                            <!-- Messaggio -->
+                            <div class="form-group full-width">
+                                <textarea id="messaggio" name="messaggio" placeholder="Messaggio" rows="8" required></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="form-submit">
+                                <button type="submit" class="btn-invia">INVIA</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Include Container -->
+    <div id="footer-container"></div>
+
+    <!-- Include CSS generale + CSS specifico pagina -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/contatti.css">
+    
+    <!-- Include JavaScript -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/contatti.js"></script>
+</body>
+</html>

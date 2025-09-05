@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Supporto - Ski Teaching</title>
+    <!-- Head content will be loaded dynamically -->
+</head>
+<body class="area-utente-page">
+    <!-- Header Include Container -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- User Menu Dropdown (positioned after header loads) -->
+        <div class="user-dropdown-menu" id="userDropdown" style="display: none;">
+            <div class="dropdown-header">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-info">
+                    <p class="user-name">Mario Rossi</p>
+                    <p class="user-email">mario.rossi@email.com</p>
+                </div>
+            </div>
+            <ul class="dropdown-menu-list">
+                <li><a href="area-utente.html"><i class="fas fa-calendar-check"></i> Prenotazioni</a></li>
+                <li><a href="lezioni-passate.html"><i class="fas fa-history"></i> Lezioni passate</a></li>
+                <li><a href="profilo.html"><i class="fas fa-user-cog"></i> Profilo</a></li>
+                <li><a href="supporto.html" class="active"><i class="fas fa-headset"></i> Supporto</a></li>
+                <li class="divider"></li>
+                <li><a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Esci</a></li>
+            </ul>
+        </div>
+
+        <!-- Supporto Section -->
+        <section class="supporto-section">
+            <div class="supporto-container">
+                <!-- Header con titolo -->
+                <div class="supporto-header">
+                    <h1 class="supporto-title">
+                        <img src="assets/img/faq.png" alt="FAQ Icon" class="faq-icon">
+                        <div class="title-text">
+                            <span class="title-small">PROBLEMI ?</span>
+                            <span class="title-large">CONTATTACI</span>
+                        </div>
+                    </h1>
+                </div>
+
+                <!-- Contact Info Section -->
+                <div class="contact-info-section">
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-label">ASSISTENZA:</div>
+                            <div class="contact-value">
+                                <a href="tel:00888800">00888800</a>
+                            </div>
+                        </div>
+                        <div class="divider-vertical"></div>
+                        <div class="contact-card">
+                            <div class="contact-label">EMAIL:</div>
+                            <div class="contact-value">
+                                <a href="mailto:help@skiteaching.it">help@skiteaching.it</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="faq-section">
+                    <h2 class="faq-title">FAQ</h2>
+                    
+                    <div class="faq-accordion">
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span class="accordion-title">SE NON HO MAI SCIATO POSSO PRENOTARE UNA LEZIONE ?</span>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-body">
+                                    <p>Assolutamente sì! Le nostre lezioni sono pensate per tutti i livelli, dai principianti assoluti agli sciatori esperti. I nostri maestri certificati sono specializzati nell'insegnamento ai principianti e ti guideranno passo dopo passo, partendo dalle basi come l'equilibrio, la posizione corretta e le prime discese. Non è necessaria alcuna esperienza pregressa, solo la voglia di imparare e divertirsi sulla neve!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span class="accordion-title">OGNI QUANTO POSSO PRENOTARE UNA LEZIONE ?</span>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-body">
+                                    <p>Puoi prenotare lezioni quando vuoi, senza limiti! Consigliamo almeno 2-3 lezioni settimanali per un apprendimento ottimale, ma la frequenza dipende dai tuoi obiettivi e disponibilità. Molti clienti prenotano lezioni giornaliere durante le vacanze, mentre altri preferiscono lezioni nei weekend. Puoi prenotare singole lezioni o pacchetti multipli con sconti progressivi. La prenotazione può essere effettuata fino a 24 ore prima della lezione, salvo disponibilità del maestro.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span class="accordion-title">POSSO DIVENTARE UN MAESTRO ?</span>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-body">
+                                    <p>Certamente! Se sei un maestro di sci certificato FISI o hai equivalenti certificazioni internazionali, puoi candidarti per entrare nel nostro team. Richiediamo almeno 2 anni di esperienza nell'insegnamento, ottime capacità comunicative e la passione per trasmettere l'amore per lo sci. Per candidarti, invia il tuo CV e le certificazioni a maestri@skiteaching.it. Offriamo compensi competitivi, flessibilità negli orari e la possibilità di lavorare nelle migliori località sciistiche.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span class="accordion-title">COSA INCLUDE IL PREZZO DELLA LEZIONE ?</span>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-body">
+                                    <p>Il prezzo include l'insegnamento professionale del maestro certificato, l'analisi tecnica personalizzata, consigli sull'attrezzatura e suggerimenti per migliorare la tecnica. Per le lezioni di gruppo (max 6 persone) il prezzo è ridotto del 30%. NON sono inclusi: skipass, noleggio attrezzatura (sci, scarponi, bastoncini, casco), trasporti e assicurazione personale. Possiamo però aiutarti a ottenere sconti presso i nostri partner per noleggio e skipass.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span class="accordion-title">POSSO CANCELLARE O MODIFICARE UNA PRENOTAZIONE ?</span>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-body">
+                                    <p>Sì, puoi modificare o cancellare la tua prenotazione fino a 48 ore prima della lezione per ricevere un rimborso completo. Tra 48 e 24 ore prima, applicheremo una penale del 50%. Cancellazioni con meno di 24 ore di preavviso non sono rimborsabili, salvo casi di emergenza documentati o condizioni meteo pericolose. In caso di maltempo estremo che impedisce lo svolgimento della lezione, potrai scegliere tra rimborso completo o riprogrammazione gratuita.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 6 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span class="accordion-title">QUALI SONO I METODI DI PAGAMENTO ACCETTATI ?</span>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-body">
+                                    <p>Accettiamo tutti i principali metodi di pagamento per garantirti la massima comodità: carte di credito/debito (Visa, Mastercard, American Express), PayPal, bonifico bancario, Apple Pay e Google Pay. Il pagamento viene processato in modo sicuro al momento della prenotazione. Per pacchetti di lezioni multiple, offriamo anche la possibilità di pagamento rateizzato in 3 rate senza interessi per importi superiori a €500.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Help Section -->
+                <div class="additional-help">
+                    <div class="help-card">
+                        <i class="fas fa-question-circle"></i>
+                        <h3>Non hai trovato quello che cercavi?</h3>
+                        <p>Il nostro team di supporto è disponibile dal lunedì al venerdì dalle 9:00 alle 18:00</p>
+                        <button class="btn-contact-support" onclick="window.location.href='contatti.html'">
+                            <i class="fas fa-paper-plane"></i>
+                            INVIA UN MESSAGGIO
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Include Container -->
+    <div id="footer-container"></div>
+
+    <!-- Include CSS generale + CSS specifico pagina -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/area-utente.css">
+    <link rel="stylesheet" href="assets/css/supporto.css">
+    
+    <!-- Include JavaScript -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/area-utente.js"></script>
+    <script src="assets/js/supporto.js"></script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Presenze - Ski Teaching</title>
+    <!-- Head content will be loaded dynamically -->
+</head>
+<body class="maestro-dashboard-page">
+    <!-- Header Include Container -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Maestro Dropdown Menu (positioned after header loads) -->
+        <div class="maestro-dropdown-menu" id="maestroDropdown" style="display: none;">
+            <div class="dropdown-header">
+                <div class="user-avatar">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="user-info">
+                    <p class="user-name">Mario Rossi</p>
+                    <p class="user-role">Maestro di Sci</p>
+                </div>
+            </div>
+            <ul class="dropdown-menu-list">
+                <li><a href="maestro-dashboard.html"><i class="fas fa-th-large"></i> Riepilogo</a></li>
+                <li><a href="maestro-gestione.html"><i class="fas fa-cog"></i> Gestione località</a></li>
+                <li><a href="maestro-prenotazioni.html"><i class="fas fa-calendar-check"></i> Prenotazioni</a></li>
+                <li><a href="maestro-presenze.html" class="active"><i class="fas fa-user-check"></i> Presenze</a></li>
+                <li><a href="maestro-profilo.html"><i class="fas fa-user-cog"></i> Profilo</a></li>
+                <li><a href="maestro-supporto.html"><i class="fas fa-headset"></i> Supporto</a></li>
+                <li class="divider"></li>
+                <li><a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Esci</a></li>
+            </ul>
+        </div>
+
+        <!-- Presenze Section -->
+        <section class="maestro-presenze-section">
+            <div class="presenze-container">
+                
+                <!-- Presenze Header -->
+                <div class="presenze-header">
+                    <div class="header-content">
+                        <div class="presenze-title-wrapper">
+                            <h1 class="presenze-title">LEZIONI DI OGGI</h1>
+                            <h2 class="presenze-date">12 FEBBRAIO</h2>
+                        </div>
+                        <div class="presenze-filter-container">
+                            <button class="btn-presenze-filter">
+                                <i class="fas fa-calendar-day"></i>
+                                <span class="filter-text">OGGI</span>
+                                <i class="fas fa-chevron-down arrow-icon"></i>
+                            </button>
+                            <div class="presenze-dropdown" style="display: none;">
+                                <ul>
+                                    <li><a href="#" data-filter="oggi" class="active">
+                                        <i class="fas fa-calendar-day"></i> Oggi
+                                    </a></li>
+                                    <li><a href="#" data-filter="domani">
+                                        <i class="fas fa-calendar-check"></i> Domani
+                                    </a></li>
+                                    <li><a href="#" data-filter="settimana">
+                                        <i class="fas fa-calendar-week"></i> Questa Settimana
+                                    </a></li>
+                                    <li><a href="#" data-filter="mese">
+                                        <i class="fas fa-calendar-alt"></i> Questo Mese
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Presenze Content -->
+                <div class="presenze-content">
+                    
+                    <!-- Lezione Privata - 13:30 -->
+                    <div class="presenza-lezione privata">
+                        <div class="lezione-header">
+                            <div class="lezione-info">
+                                <img src="assets/img/icona-home-2.png" alt="Privata" class="lezione-icon">
+                                <div class="lezione-details">
+                                    <span class="lezione-time">12 FEBBRAIO ORE 13:30</span>
+                                </div>
+                            </div>
+                            <div class="lezione-type">
+                                <span class="type-badge privata">PRIVATA</span>
+                            </div>
+                        </div>
+                        
+                        <div class="presenze-list">
+                            <!-- Allievo singolo -->
+                            <div class="presenza-item">
+                                <div class="allievo-info">
+                                    <div class="allievo-avatar">
+                                        <img src="assets/img/avatar-1.jpg" alt="Palladneve10">
+                                    </div>
+                                    <div class="allievo-details">
+                                        <h3 class="allievo-nome">PALLADNEVE10</h3>
+                                    </div>
+                                </div>
+                                <div class="presenza-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <span class="location-name">Seggiovia Pizzalto</span>
+                                        <span class="location-city">Roccaraso</span>
+                                    </div>
+                                </div>
+                                <div class="presenza-actions">
+                                    <button class="btn-presenza presente" data-status="presente">Presente</button>
+                                    <button class="btn-presenza assente" data-status="assente">Assente</button>
+                                    <button class="btn-dettagli" title="Dettagli prenotazione">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lezione Collettiva - 12:00 -->
+                    <div class="presenza-lezione collettiva">
+                        <div class="lezione-header">
+                            <div class="lezione-info">
+                                <img src="assets/img/collettiva_acceso.png" alt="Collettiva" class="lezione-icon">
+                                <div class="lezione-details">
+                                    <span class="lezione-time">12 FEBBRAIO ORE 12:00</span>
+                                </div>
+                            </div>
+                            <div class="lezione-type">
+                                <span class="type-badge collettiva">COLLETTIVA</span>
+                            </div>
+                        </div>
+                        
+                        <div class="presenze-list">
+                            <!-- Allievo 1 -->
+                            <div class="presenza-item">
+                                <div class="allievo-info">
+                                    <div class="allievo-avatar">
+                                        <img src="assets/img/avatar-2.jpg" alt="Pinkflame">
+                                    </div>
+                                    <div class="allievo-details">
+                                        <h3 class="allievo-nome">PINKFLAME</h3>
+                                    </div>
+                                </div>
+                                <div class="presenza-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <span class="location-name">Seggiovia Pizzalto</span>
+                                        <span class="location-city">Roccaraso</span>
+                                    </div>
+                                </div>
+                                <div class="presenza-status presente-status">
+                                    <span>Presente</span>
+                                </div>
+                                <div class="presenza-actions">
+                                    <button class="btn-presenza presente active" data-status="presente">Presente</button>
+                                    <button class="btn-presenza assente" data-status="assente">Assente</button>
+                                    <button class="btn-dettagli" title="Dettagli prenotazione">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Allievo 2 -->
+                            <div class="presenza-item">
+                                <div class="allievo-info">
+                                    <div class="allievo-avatar">
+                                        <img src="assets/img/avatar-3.jpg" alt="Emmanadia">
+                                    </div>
+                                    <div class="allievo-details">
+                                        <h3 class="allievo-nome">EMMANADIA</h3>
+                                    </div>
+                                </div>
+                                <div class="presenza-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <span class="location-name">Seggiovia Pizzalto</span>
+                                        <span class="location-city">Roccaraso</span>
+                                    </div>
+                                </div>
+                                <div class="presenza-status assente-status">
+                                    <span>Assente</span>
+                                </div>
+                                <div class="presenza-actions">
+                                    <button class="btn-presenza presente" data-status="presente">Presente</button>
+                                    <button class="btn-presenza assente active" data-status="assente">Assente</button>
+                                    <button class="btn-dettagli" title="Dettagli prenotazione">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Allievo 3 -->
+                            <div class="presenza-item">
+                                <div class="allievo-info">
+                                    <div class="allievo-avatar">
+                                        <img src="assets/img/avatar-4.jpg" alt="Powerski">
+                                    </div>
+                                    <div class="allievo-details">
+                                        <h3 class="allievo-nome">POWERSKI</h3>
+                                    </div>
+                                </div>
+                                <div class="presenza-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <span class="location-name">Seggiovia Pizzalto</span>
+                                        <span class="location-city">Roccaraso</span>
+                                    </div>
+                                </div>
+                                <div class="presenza-status presente-status">
+                                    <span>Presente</span>
+                                </div>
+                                <div class="presenza-actions">
+                                    <button class="btn-presenza presente active" data-status="presente">Presente</button>
+                                    <button class="btn-presenza assente" data-status="assente">Assente</button>
+                                    <button class="btn-dettagli" title="Dettagli prenotazione">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lezione Privata - 15:30 -->
+                    <div class="presenza-lezione privata">
+                        <div class="lezione-header">
+                            <div class="lezione-info">
+                                <img src="assets/img/icona-home-2.png" alt="Privata" class="lezione-icon">
+                                <div class="lezione-details">
+                                    <span class="lezione-time">12 FEBBRAIO ORE 15:30</span>
+                                </div>
+                            </div>
+                            <div class="lezione-type">
+                                <span class="type-badge privata">PRIVATA</span>
+                            </div>
+                        </div>
+                        
+                        <div class="presenze-list">
+                            <!-- Allievo singolo -->
+                            <div class="presenza-item">
+                                <div class="allievo-info">
+                                    <div class="allievo-avatar">
+                                        <img src="assets/img/avatar-1.jpg" alt="Marco Rossi">
+                                    </div>
+                                    <div class="allievo-details">
+                                        <h3 class="allievo-nome">MARCO ROSSI</h3>
+                                    </div>
+                                </div>
+                                <div class="presenza-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <span class="location-name">Seggiovia Pizzalto</span>
+                                        <span class="location-city">Roccaraso</span>
+                                    </div>
+                                </div>
+                                <div class="presenza-actions">
+                                    <button class="btn-presenza presente" data-status="presente">Presente</button>
+                                    <button class="btn-presenza assente" data-status="assente">Assente</button>
+                                    <button class="btn-dettagli" title="Dettagli prenotazione">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Include Container -->
+    <div id="footer-container"></div>
+
+    <!-- Include CSS generale + CSS specifico pagina -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/maestro-dashboard.css">
+    <link rel="stylesheet" href="assets/css/maestro-presenze.css">
+    
+    <!-- Include JavaScript -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/maestro-presenze.js"></script>
+</body>
+</html>

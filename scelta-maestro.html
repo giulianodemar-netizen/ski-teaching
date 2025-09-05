@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Scegli il Maestro - Ski Teaching</title>
+    <!-- Head content will be loaded dynamically -->
+</head>
+<body class="scelta-maestro-page">
+    <!-- Header Include Container -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header Hero con Filtri -->
+        <section class="scelta-hero">
+            <div class="hero-background">
+                <img src="assets/img/img-1.jpg" alt="Ski Teaching">
+            </div>
+            
+            <div class="hero-content">
+                <!-- Titolo Centrato -->
+                <div class="hero-title animate-on-scroll">
+                    <h1>SCEGLI IL <span class="highlight">MAESTRO DI SCI</span><br>PERFETTO PER TE</h1>
+                </div>
+                
+                <!-- Filtri Container -->
+                <div class="filtri-header animate-on-scroll">
+                    <!-- Riga 1: Stile e Gruppo -->
+                    <div class="filtri-row">
+                        <!-- Scegli lo stile -->
+                        <div class="filtro-box">
+                            <h3>SCEGLI LO STILE</h3>
+                            <div class="stile-options">
+                                <button class="stile-btn active" data-stile="sci">
+                                    <img src="assets/img/Sci_acceso.png" alt="Sci" class="icon-active">
+                                    <img src="assets/img/sci_spento.png" alt="Sci" class="icon-inactive" style="display:none;">
+                                    <span>SCI</span>
+                                </button>
+                                <button class="stile-btn" data-stile="snowboard">
+                                    <img src="assets/img/snowboard_spento.png" alt="Snowboard" class="icon-inactive">
+                                    <img src="assets/img/snowboard_acceso.png" alt="Snowboard" class="icon-active" style="display:none;">
+                                    <span>SNOWBOARD</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- SINGOLA O DI GRUPPO -->
+                        <div class="filtro-box">
+                            <h3>SINGOLA O DI GRUPPO?</h3>
+                            <div class="gruppo-options">
+                                <button class="gruppo-btn active" data-gruppo="singola">
+                                    <img src="assets/img/singolo_acceso.png" alt="Singola" class="icon-active">
+                                    <img src="assets/img/singolo_spento.png" alt="Singola" class="icon-inactive" style="display:none;">
+                                    <span>SINGOLA</span>
+                                </button>
+                                <button class="gruppo-btn" data-gruppo="gruppo">
+                                    <img src="assets/img/collettiva_spento.png" alt="Di Gruppo" class="icon-inactive">
+                                    <img src="assets/img/collettiva_acceso.png" alt="Di Gruppo" class="icon-active" style="display:none;">
+                                    <span>DI GRUPPO</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Riga 2: Dove e Quando -->
+                    <div class="filtri-row">
+                        <div class="input-group">
+                            <div class="input-wrapper">
+                                <img src="assets/img/Montagna.png" alt="Località" class="input-icon">
+                                <div class="dropdown-container">
+                                    <input type="text" 
+                                           id="dove-input" 
+                                           placeholder="DOVE VUOI SCIARE?" 
+                                           readonly
+                                           class="dropdown-input">
+                                    <i class="fas fa-chevron-down dropdown-arrow"></i>
+                                    <div class="dropdown-menu" id="localita-dropdown">
+                                        <!-- Populated dynamically from data-localita attributes -->
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="input-wrapper date-input-wrapper">
+                                <input type="date" 
+                                       id="quando-input" 
+                                       placeholder="QUANDO?" 
+                                       class="date-input">
+                                <label for="quando-input" class="date-icon-label">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-cerca" id="btn-cerca-maestri">
+                            CERCA
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Maestri con Filtri Laterali -->
+        <section class="maestri-section">
+            <div class="maestri-container">
+                <!-- Sidebar Filtri -->
+                <aside class="filtri-sidebar">
+                    <!-- Header mobile collassabile -->
+                    <div class="filtri-sidebar-header">
+                        <h3>FILTRI</h3>
+                        <i class="fas fa-chevron-down filtri-toggle-icon"></i>
+                    </div>
+                    
+                    <div class="filtri-sidebar-content">
+                        <!-- Filtro Località -->
+                    <div class="filtro-group">
+                        <h3><i class="fas fa-map-marker-alt"></i> FILTRA PER LOCALITÀ</h3>
+                        <div class="filtro-options">
+                            <label class="filtro-option">
+                                <input type="checkbox" value="roccaraso" class="filtro-localita">
+                                <span class="checkmark"></span>
+                                Roccaraso
+                            </label>
+                            <label class="filtro-option">
+                                <input type="checkbox" value="campo-felice" class="filtro-localita">
+                                <span class="checkmark"></span>
+                                Campo Felice
+                            </label>
+                            <label class="filtro-option">
+                                <input type="checkbox" value="ovindoli" class="filtro-localita">
+                                <span class="checkmark"></span>
+                                Ovindoli
+                            </label>
+                            <label class="filtro-option">
+                                <input type="checkbox" value="marileva-1400" class="filtro-localita">
+                                <span class="checkmark"></span>
+                                Marileva 1400
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Filtro Orario -->
+                    <div class="filtro-group">
+                        <h3><i class="fas fa-clock"></i> ORARIO</h3>
+                        <div class="orario-selector">
+                            <input type="text" id="orario-input" placeholder="12:30" class="orario-input">
+                            <div class="orario-dropdown" style="display: none;">
+                                <div class="orario-item">09:00</div>
+                                <div class="orario-item">10:00</div>
+                                <div class="orario-item">11:00</div>
+                                <div class="orario-item">12:00</div>
+                                <div class="orario-item">13:00</div>
+                                <div class="orario-item">14:00</div>
+                                <div class="orario-item">15:00</div>
+                                <div class="orario-item">16:00</div>
+                                <div class="orario-item">17:00</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Filtro Specialità -->
+                    <div class="filtro-group">
+                        <h3>FILTRA PER SPECIALITÀ</h3>
+                        <div class="filtro-options">
+                            <label class="filtro-option">
+                                <input type="checkbox" value="sci" class="filtro-specialita" checked>
+                                <span class="checkmark"></span>
+                                Sci
+                            </label>
+                            <label class="filtro-option">
+                                <input type="checkbox" value="snowboard" class="filtro-specialita">
+                                <span class="checkmark"></span>
+                                Snowboard
+                            </label>
+                            <label class="filtro-option">
+                                <input type="checkbox" value="sci-snowboard" class="filtro-specialita">
+                                <span class="checkmark"></span>
+                                Sci e Snowboard
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Filtro Tipologia -->
+                    <div class="filtro-group">
+                        <h3>FILTRA PER TIPOLOGIA</h3>
+                        <div class="filtro-options">
+                            <label class="filtro-option">
+                                <input type="radio" name="tipologia" value="singola" class="filtro-tipologia" checked>
+                                <span class="checkmark"></span>
+                                Singola
+                            </label>
+                            <label class="filtro-option">
+                                <input type="radio" name="tipologia" value="gruppo" class="filtro-tipologia">
+                                <span class="checkmark"></span>
+                                Di gruppo
+                            </label>
+                            <label class="filtro-option">
+                                <input type="radio" name="tipologia" value="entrambe" class="filtro-tipologia">
+                                <span class="checkmark"></span>
+                                Entrambe
+                            </label>
+                        </div>
+                    </div>
+                    
+                        <!-- Pulsante Filtra -->
+                        <button class="btn-filtra">FILTRA</button>
+                        
+                        <!-- Reset Filtri Link -->
+                        <div class="reset-filtri-container">
+                            <a href="#" class="reset-filtri-link" onclick="clearAllSidebarFilters(); return false;">
+                                <i class="fas fa-times-circle"></i> Cancella filtri e mostra tutti i maestri
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Grid Maestri -->
+                <div class="maestri-grid" id="maestri-grid">
+                    <!-- Maestro 1 -->
+                    <div class="maestro-card" data-localita="roccaraso" data-specialita="sci" data-tipologia="singola" data-orario="09:00,10:00,14:00,15:00">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro1-bn.jpg" alt="Eric Prince">
+                            <div class="maestro-hover">
+                                <div class="maestro-nome">ERIC PRINCE</div>
+                                <div class="maestro-rating">
+                                    <i class="fas fa-star"></i> 4.8 <span class="commenti">(12 commenti)</span>
+                                </div>
+                                <div class="maestro-bio">
+                                    Maestro esperto con 15 anni di esperienza, specializzato in tecniche avanzate
+                                </div>
+                                <div class="hover-buttons">
+                                    <button class="btn-scheda" onclick="location.href='maestro-dettaglio.html'">
+                                        SCHEDA MAESTRO
+                                    </button>
+                                    <button class="btn-prenota" onclick="location.href='prenota-maestro.html'">
+                                        PRENOTA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>ERIC PRINCE</h4>
+                            <div class="maestro-rating-small">
+                                <i class="fas fa-star"></i> 4.8 <span>(12 commenti)</span>
+                            </div>
+                            <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Roccaraso</p>
+                            <p class="maestro-specialita"><img src="assets/img/Sci_acceso.png" alt="Sci"> Sci</p>
+                            <p class="maestro-tipo"><i class="fas fa-user"></i> Lezioni singole</p>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 2 -->
+                    <div class="maestro-card" data-localita="roccaraso" data-specialita="snowboard" data-tipologia="gruppo" data-orario="10:00,11:00,15:00,16:00">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro2-bn.jpg" alt="John Smith">
+                            <div class="maestro-hover">
+                                <div class="maestro-nome">JOHN SMITH</div>
+                                <div class="maestro-rating">
+                                    <i class="fas fa-star"></i> 4.6 <span class="commenti">(8 commenti)</span>
+                                </div>
+                                <div class="maestro-bio">
+                                    Specializzato in snowboard freestyle, perfetto per gruppi giovani
+                                </div>
+                                <div class="hover-buttons">
+                                    <button class="btn-scheda" onclick="location.href='maestro-dettaglio.html'">
+                                        SCHEDA MAESTRO
+                                    </button>
+                                    <button class="btn-prenota" onclick="location.href='prenota-maestro.html'">
+                                        PRENOTA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>JOHN SMITH</h4>
+                            <div class="maestro-rating-small">
+                                <i class="fas fa-star"></i> 4.6 <span>(8 commenti)</span>
+                            </div>
+                            <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Roccaraso</p>
+                            <p class="maestro-specialita"><img src="assets/img/snowboard_acceso.png" alt="Snowboard"> Snowboard</p>
+                            <p class="maestro-tipo"><i class="fas fa-users"></i> Lezioni di gruppo</p>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 3 -->
+                    <div class="maestro-card" data-localita="roccaraso" data-specialita="sci-snowboard" data-tipologia="entrambe" data-orario="09:00,10:00,11:00,14:00,15:00,16:00">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro3-bn.jpg" alt="Megara Erin">
+                            <div class="maestro-hover">
+                                <div class="maestro-nome">MEGARA ERIN</div>
+                                <div class="maestro-rating">
+                                    <i class="fas fa-star"></i> 5.0 <span class="commenti">(20 commenti)</span>
+                                </div>
+                                <div class="maestro-bio">
+                                    Maestra versatile, eccellente con bambini e principianti
+                                </div>
+                                <div class="hover-buttons">
+                                    <button class="btn-scheda" onclick="location.href='maestro-dettaglio.html'">
+                                        SCHEDA MAESTRO
+                                    </button>
+                                    <button class="btn-prenota" onclick="location.href='prenota-maestro.html'">
+                                        PRENOTA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>MEGARA ERIN</h4>
+                            <div class="maestro-rating-small">
+                                <i class="fas fa-star"></i> 5.0 <span>(20 commenti)</span>
+                            </div>
+                            <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Roccaraso</p>
+                            <p class="maestro-specialita">
+                                <img src="assets/img/Sci_acceso.png" alt="Sci">
+                                <img src="assets/img/snowboard_acceso.png" alt="Snowboard">
+                                Sci e Snowboard
+                            </p>
+                            <p class="maestro-tipo"><i class="fas fa-user-friends"></i> Singole e di gruppo</p>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 4 -->
+                    <div class="maestro-card" data-localita="marileva-1400" data-specialita="sci" data-tipologia="singola" data-orario="11:00,12:00,15:00,16:00">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro2-bn.jpg" alt="Charming">
+                            <div class="maestro-hover">
+                                <div class="maestro-nome">CHARMING</div>
+                                <div class="maestro-rating">
+                                    <i class="fas fa-star"></i> 4.7 <span class="commenti">(15 commenti)</span>
+                                </div>
+                                <div class="maestro-bio">
+                                    Tecnica perfetta, specializzato in sci alpino agonistico
+                                </div>
+                                <div class="hover-buttons">
+                                    <button class="btn-scheda" onclick="location.href='maestro-dettaglio.html'">
+                                        SCHEDA MAESTRO
+                                    </button>
+                                    <button class="btn-prenota" onclick="location.href='prenota-maestro.html'">
+                                        PRENOTA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>CHARMING</h4>
+                            <div class="maestro-rating-small">
+                                <i class="fas fa-star"></i> 4.7 <span>(15 commenti)</span>
+                            </div>
+                            <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Marileva 1400</p>
+                            <p class="maestro-specialita"><img src="assets/img/Sci_acceso.png" alt="Sci"> Sci</p>
+                            <p class="maestro-tipo"><i class="fas fa-user"></i> Lezioni singole</p>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 5 -->
+                    <div class="maestro-card" data-localita="roccaraso" data-specialita="sci" data-tipologia="gruppo" data-orario="09:00,10:00,14:00">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro1-bn.jpg" alt="Paolo Bianchi">
+                            <div class="maestro-hover">
+                                <div class="maestro-nome">PAOLO BIANCHI</div>
+                                <div class="maestro-rating">
+                                    <i class="fas fa-star"></i> 4.5 <span class="commenti">(7 commenti)</span>
+                                </div>
+                                <div class="maestro-bio">
+                                    Esperto in lezioni collettive per adulti principianti
+                                </div>
+                                <div class="hover-buttons">
+                                    <button class="btn-scheda" onclick="location.href='maestro-dettaglio.html'">
+                                        SCHEDA MAESTRO
+                                    </button>
+                                    <button class="btn-prenota" onclick="location.href='prenota-maestro.html'">
+                                        PRENOTA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>PAOLO BIANCHI</h4>
+                            <div class="maestro-rating-small">
+                                <i class="fas fa-star"></i> 4.5 <span>(7 commenti)</span>
+                            </div>
+                            <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Roccaraso</p>
+                            <p class="maestro-specialita"><img src="assets/img/Sci_acceso.png" alt="Sci"> Sci</p>
+                            <p class="maestro-tipo"><i class="fas fa-users"></i> Lezioni di gruppo</p>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 6 -->
+                    <div class="maestro-card" data-localita="marileva-1400" data-specialita="snowboard" data-tipologia="entrambe" data-orario="10:00,11:00,14:00,15:00,16:00">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro3-bn.jpg" alt="Belle Books">
+                            <div class="maestro-hover">
+                                <div class="maestro-nome">BELLE BOOKS</div>
+                                <div class="maestro-rating">
+                                    <i class="fas fa-star"></i> 4.9 <span class="commenti">(18 commenti)</span>
+                                </div>
+                                <div class="maestro-bio">
+                                    Campionessa di snowboard cross, ottima per tutti i livelli
+                                </div>
+                                <div class="hover-buttons">
+                                    <button class="btn-scheda" onclick="location.href='maestro-dettaglio.html'">
+                                        SCHEDA MAESTRO
+                                    </button>
+                                    <button class="btn-prenota" onclick="location.href='prenota-maestro.html'">
+                                        PRENOTA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>BELLE BOOKS</h4>
+                            <div class="maestro-rating-small">
+                                <i class="fas fa-star"></i> 4.9 <span>(18 commenti)</span>
+                            </div>
+                            <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Marileva 1400</p>
+                            <p class="maestro-specialita"><img src="assets/img/snowboard_acceso.png" alt="Snowboard"> Snowboard</p>
+                            <p class="maestro-tipo"><i class="fas fa-user-friends"></i> Singole e di gruppo</p>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 7 -->
+                    <div class="maestro-card" data-localita="campo-felice" data-specialita="sci-snowboard" data-tipologia="singola" data-orario="09:00,11:00,14:00,15:00">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro1-bn.jpg" alt="Marco Rossi">
+                            <div class="maestro-hover">
+                                <div class="maestro-nome">MARCO ROSSI</div>
+                                <div class="maestro-rating">
+                                    <i class="fas fa-star"></i> 4.7 <span class="commenti">(11 commenti)</span>
+                                </div>
+                                <div class="maestro-bio">
+                                    Maestro polivalente, ottimo per perfezionamento tecnico
+                                </div>
+                                <div class="hover-buttons">
+                                    <button class="btn-scheda" onclick="location.href='maestro-dettaglio.html'">
+                                        SCHEDA MAESTRO
+                                    </button>
+                                    <button class="btn-prenota" onclick="location.href='prenota-maestro.html'">
+                                        PRENOTA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>MARCO ROSSI</h4>
+                            <div class="maestro-rating-small">
+                                <i class="fas fa-star"></i> 4.7 <span>(11 commenti)</span>
+                            </div>
+                            <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Campo Felice</p>
+                            <p class="maestro-specialita">
+                                <img src="assets/img/Sci_acceso.png" alt="Sci">
+                                <img src="assets/img/snowboard_acceso.png" alt="Snowboard">
+                                Sci e Snowboard
+                            </p>
+                            <p class="maestro-tipo"><i class="fas fa-user"></i> Lezioni singole</p>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 8 -->
+                    <div class="maestro-card" data-localita="ovindoli" data-specialita="sci" data-tipologia="gruppo" data-orario="10:00,11:00,12:00">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro2-bn.jpg" alt="Luca Bianchi">
+                            <div class="maestro-hover">
+                                <div class="maestro-nome">LUCA BIANCHI</div>
+                                <div class="maestro-rating">
+                                    <i class="fas fa-star"></i> 4.4 <span class="commenti">(6 commenti)</span>
+                                </div>
+                                <div class="maestro-bio">
+                                    Specializzato in gruppi di bambini e corsi settimanali
+                                </div>
+                                <div class="hover-buttons">
+                                    <button class="btn-scheda" onclick="location.href='maestro-dettaglio.html'">
+                                        SCHEDA MAESTRO
+                                    </button>
+                                    <button class="btn-prenota" onclick="location.href='prenota-maestro.html'">
+                                        PRENOTA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>LUCA BIANCHI</h4>
+                            <div class="maestro-rating-small">
+                                <i class="fas fa-star"></i> 4.4 <span>(6 commenti)</span>
+                            </div>
+                            <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Ovindoli</p>
+                            <p class="maestro-specialita"><img src="assets/img/Sci_acceso.png" alt="Sci"> Sci</p>
+                            <p class="maestro-tipo"><i class="fas fa-users"></i> Lezioni di gruppo</p>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 9 -->
+                    <div class="maestro-card" data-localita="campo-felice" data-specialita="snowboard" data-tipologia="entrambe" data-orario="09:00,10:00,14:00,15:00,16:00">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro3-bn.jpg" alt="Sofia Verde">
+                            <div class="maestro-hover">
+                                <div class="maestro-nome">SOFIA VERDE</div>
+                                <div class="maestro-rating">
+                                    <i class="fas fa-star"></i> 5.0 <span class="commenti">(22 commenti)</span>
+                                </div>
+                                <div class="maestro-bio">
+                                    Istruttrice di snowboard con focus su park e trick
+                                </div>
+                                <div class="hover-buttons">
+                                    <button class="btn-scheda" onclick="location.href='maestro-dettaglio.html'">
+                                        SCHEDA MAESTRO
+                                    </button>
+                                    <button class="btn-prenota" onclick="location.href='prenota-maestro.html'">
+                                        PRENOTA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>SOFIA VERDE</h4>
+                            <div class="maestro-rating-small">
+                                <i class="fas fa-star"></i> 5.0 <span>(22 commenti)</span>
+                            </div>
+                            <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Campo Felice</p>
+                            <p class="maestro-specialita"><img src="assets/img/snowboard_acceso.png" alt="Snowboard"> Snowboard</p>
+                            <p class="maestro-tipo"><i class="fas fa-user-friends"></i> Singole e di gruppo</p>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 10 -->
+                    <div class="maestro-card" data-localita="roccaraso" data-specialita="sci" data-tipologia="singola" data-orario="09:00,10:00,11:00,14:00">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro1-bn.jpg" alt="Andrea Neri">
+                            <div class="maestro-hover">
+                                <div class="maestro-nome">ANDREA NERI</div>
+                                <div class="maestro-rating">
+                                    <i class="fas fa-star"></i> 4.6 <span class="commenti">(9 commenti)</span>
+                                </div>
+                                <div class="maestro-bio">
+                                    Ex atleta nazionale, specialista in carving e velocità
+                                </div>
+                                <div class="hover-buttons">
+                                    <button class="btn-scheda" onclick="location.href='maestro-dettaglio.html'">
+                                        SCHEDA MAESTRO
+                                    </button>
+                                    <button class="btn-prenota" onclick="location.href='prenota-maestro.html'">
+                                        PRENOTA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>ANDREA NERI</h4>
+                            <div class="maestro-rating-small">
+                                <i class="fas fa-star"></i> 4.6 <span>(9 commenti)</span>
+                            </div>
+                            <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Roccaraso</p>
+                            <p class="maestro-specialita"><img src="assets/img/Sci_acceso.png" alt="Sci"> Sci</p>
+                            <p class="maestro-tipo"><i class="fas fa-user"></i> Lezioni singole</p>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 11 -->
+                    <div class="maestro-card" data-localita="marileva-1400" data-specialita="sci-snowboard" data-tipologia="gruppo" data-orario="10:00,11:00,14:00,15:00">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro2-bn.jpg" alt="Giulia Blu">
+                            <div class="maestro-hover">
+                                <div class="maestro-nome">GIULIA BLU</div>
+                                <div class="maestro-rating">
+                                    <i class="fas fa-star"></i> 4.8 <span class="commenti">(14 commenti)</span>
+                                </div>
+                                <div class="maestro-bio">
+                                    Maestra dinamica, perfetta per gruppi misti sci/snowboard
+                                </div>
+                                <div class="hover-buttons">
+                                    <button class="btn-scheda" onclick="location.href='maestro-dettaglio.html'">
+                                        SCHEDA MAESTRO
+                                    </button>
+                                    <button class="btn-prenota" onclick="location.href='prenota-maestro.html'">
+                                        PRENOTA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>GIULIA BLU</h4>
+                            <div class="maestro-rating-small">
+                                <i class="fas fa-star"></i> 4.8 <span>(14 commenti)</span>
+                            </div>
+                            <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Marileva 1400</p>
+                            <p class="maestro-specialita">
+                                <img src="assets/img/Sci_acceso.png" alt="Sci">
+                                <img src="assets/img/snowboard_acceso.png" alt="Snowboard">
+                                Sci e Snowboard
+                            </p>
+                            <p class="maestro-tipo"><i class="fas fa-users"></i> Lezioni di gruppo</p>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 12 -->
+                    <div class="maestro-card" data-localita="ovindoli" data-specialita="snowboard" data-tipologia="singola" data-orario="09:00,14:00,15:00,16:00">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro3-bn.jpg" alt="Matteo Oro">
+                            <div class="maestro-hover">
+                                <div class="maestro-nome">MATTEO ORO</div>
+                                <div class="maestro-rating">
+                                    <i class="fas fa-star"></i> 4.5 <span class="commenti">(10 commenti)</span>
+                                </div>
+                                <div class="maestro-bio">
+                                    Snowboard freeride expert, specializzato in fuoripista
+                                </div>
+                                <div class="hover-buttons">
+                                    <button class="btn-scheda" onclick="location.href='maestro-dettaglio.html'">
+                                        SCHEDA MAESTRO
+                                    </button>
+                                    <button class="btn-prenota" onclick="location.href='prenota-maestro.html'">
+                                        PRENOTA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>MATTEO ORO</h4>
+                            <div class="maestro-rating-small">
+                                <i class="fas fa-star"></i> 4.5 <span>(10 commenti)</span>
+                            </div>
+                            <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Ovindoli</p>
+                            <p class="maestro-specialita"><img src="assets/img/snowboard_acceso.png" alt="Snowboard"> Snowboard</p>
+                            <p class="maestro-tipo"><i class="fas fa-user"></i> Lezioni singole</p>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 13 -->
+                    <div class="maestro-card" data-localita="campo-felice" data-specialita="sci" data-tipologia="entrambe" data-orario="09:00,10:00,11:00,14:00,15:00">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro1-bn.jpg" alt="Francesco Viola">
+                            <div class="maestro-hover">
+                                <div class="maestro-nome">FRANCESCO VIOLA</div>
+                                <div class="maestro-rating">
+                                    <i class="fas fa-star"></i> 4.9 <span class="commenti">(17 commenti)</span>
+                                </div>
+                                <div class="maestro-bio">
+                                    25 anni di esperienza, direttore tecnico scuola sci
+                                </div>
+                                <div class="hover-buttons">
+                                    <button class="btn-scheda" onclick="location.href='maestro-dettaglio.html'">
+                                        SCHEDA MAESTRO
+                                    </button>
+                                    <button class="btn-prenota" onclick="location.href='prenota-maestro.html'">
+                                        PRENOTA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>FRANCESCO VIOLA</h4>
+                            <div class="maestro-rating-small">
+                                <i class="fas fa-star"></i> 4.9 <span>(17 commenti)</span>
+                            </div>
+                            <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Campo Felice</p>
+                            <p class="maestro-specialita"><img src="assets/img/Sci_acceso.png" alt="Sci"> Sci</p>
+                            <p class="maestro-tipo"><i class="fas fa-user-friends"></i> Singole e di gruppo</p>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 14 -->
+                    <div class="maestro-card" data-localita="roccaraso" data-specialita="sci-snowboard" data-tipologia="gruppo" data-orario="10:00,11:00,12:00,14:00">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro2-bn.jpg" alt="Chiara Rosa">
+                            <div class="maestro-hover">
+                                <div class="maestro-nome">CHIARA ROSA</div>
+                                <div class="maestro-rating">
+                                    <i class="fas fa-star"></i> 4.7 <span class="commenti">(13 commenti)</span>
+                                </div>
+                                <div class="maestro-bio">
+                                    Specializzata in corsi per principianti e bambini
+                                </div>
+                                <div class="hover-buttons">
+                                    <button class="btn-scheda" onclick="location.href='maestro-dettaglio.html'">
+                                        SCHEDA MAESTRO
+                                    </button>
+                                    <button class="btn-prenota" onclick="location.href='prenota-maestro.html'">
+                                        PRENOTA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>CHIARA ROSA</h4>
+                            <div class="maestro-rating-small">
+                                <i class="fas fa-star"></i> 4.7 <span>(13 commenti)</span>
+                            </div>
+                            <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Roccaraso</p>
+                            <p class="maestro-specialita">
+                                <img src="assets/img/Sci_acceso.png" alt="Sci">
+                                <img src="assets/img/snowboard_acceso.png" alt="Snowboard">
+                                Sci e Snowboard
+                            </p>
+                            <p class="maestro-tipo"><i class="fas fa-users"></i> Lezioni di gruppo</p>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 15 -->
+                    <div class="maestro-card" data-localita="marileva-1400" data-specialita="sci" data-tipologia="singola" data-orario="09:00,10:00,15:00,16:00">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro3-bn.jpg" alt="Davide Grigio">
+                            <div class="maestro-hover">
+                                <div class="maestro-nome">DAVIDE GRIGIO</div>
+                                <div class="maestro-rating">
+                                    <i class="fas fa-star"></i> 4.8 <span class="commenti">(16 commenti)</span>
+                                </div>
+                                <div class="maestro-bio">
+                                    Maestro federale, specializzato in sci alpinismo
+                                </div>
+                                <div class="hover-buttons">
+                                    <button class="btn-scheda" onclick="location.href='maestro-dettaglio.html'">
+                                        SCHEDA MAESTRO
+                                    </button>
+                                    <button class="btn-prenota" onclick="location.href='prenota-maestro.html'">
+                                        PRENOTA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>DAVIDE GRIGIO</h4>
+                            <div class="maestro-rating-small">
+                                <i class="fas fa-star"></i> 4.8 <span>(16 commenti)</span>
+                            </div>
+                            <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Marileva 1400</p>
+                            <p class="maestro-specialita"><img src="assets/img/Sci_acceso.png" alt="Sci"> Sci</p>
+                            <p class="maestro-tipo"><i class="fas fa-user"></i> Lezioni singole</p>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 16 -->
+                    <div class="maestro-card" data-localita="ovindoli" data-specialita="snowboard" data-tipologia="entrambe" data-orario="09:00,10:00,11:00,14:00,15:00,16:00">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro1-bn.jpg" alt="Elena Argento">
+                            <div class="maestro-hover">
+                                <div class="maestro-nome">ELENA ARGENTO</div>
+                                <div class="maestro-rating">
+                                    <i class="fas fa-star"></i> 5.0 <span class="commenti">(25 commenti)</span>
+                                </div>
+                                <div class="maestro-bio">
+                                    Campionessa italiana snowboard, coach professionista
+                                </div>
+                                <div class="hover-buttons">
+                                    <button class="btn-scheda" onclick="location.href='maestro-dettaglio.html'">
+                                        SCHEDA MAESTRO
+                                    </button>
+                                    <button class="btn-prenota" onclick="location.href='prenota-maestro.html'">
+                                        PRENOTA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>ELENA ARGENTO</h4>
+                            <div class="maestro-rating-small">
+                                <i class="fas fa-star"></i> 5.0 <span>(25 commenti)</span>
+                            </div>
+                            <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Ovindoli</p>
+                            <p class="maestro-specialita"><img src="assets/img/snowboard_acceso.png" alt="Snowboard"> Snowboard</p>
+                            <p class="maestro-tipo"><i class="fas fa-user-friends"></i> Singole e di gruppo</p>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 17 -->
+                    <div class="maestro-card" data-localita="campo-felice" data-specialita="sci-snowboard" data-tipologia="gruppo" data-orario="11:00,12:00,14:00,15:00">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro2-bn.jpg" alt="Roberto Marrone">
+                            <div class="maestro-hover">
+                                <div class="maestro-nome">ROBERTO MARRONE</div>
+                                <div class="maestro-rating">
+                                    <i class="fas fa-star"></i> 4.6 <span class="commenti">(11 commenti)</span>
+                                </div>
+                                <div class="maestro-bio">
+                                    Maestro energico, perfetto per gruppi di teenagers
+                                </div>
+                                <div class="hover-buttons">
+                                    <button class="btn-scheda" onclick="location.href='maestro-dettaglio.html'">
+                                        SCHEDA MAESTRO
+                                    </button>
+                                    <button class="btn-prenota" onclick="location.href='prenota-maestro.html'">
+                                        PRENOTA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>ROBERTO MARRONE</h4>
+                            <div class="maestro-rating-small">
+                                <i class="fas fa-star"></i> 4.6 <span>(11 commenti)</span>
+                            </div>
+                            <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Campo Felice</p>
+                            <p class="maestro-specialita">
+                                <img src="assets/img/Sci_acceso.png" alt="Sci">
+                                <img src="assets/img/snowboard_acceso.png" alt="Snowboard">
+                                Sci e Snowboard
+                            </p>
+                            <p class="maestro-tipo"><i class="fas fa-users"></i> Lezioni di gruppo</p>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 18 -->
+                    <div class="maestro-card" data-localita="roccaraso" data-specialita="sci" data-tipologia="entrambe" data-orario="09:00,10:00,11:00,14:00">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro3-bn.jpg" alt="Valentina Celeste">
+                            <div class="maestro-hover">
+                                <div class="maestro-nome">VALENTINA CELESTE</div>
+                                <div class="maestro-rating">
+                                    <i class="fas fa-star"></i> 4.9 <span class="commenti">(19 commenti)</span>
+                                </div>
+                                <div class="maestro-bio">
+                                    Maestra paziente e professionale, ottima con anziani
+                                </div>
+                                <div class="hover-buttons">
+                                    <button class="btn-scheda" onclick="location.href='maestro-dettaglio.html'">
+                                        SCHEDA MAESTRO
+                                    </button>
+                                    <button class="btn-prenota" onclick="location.href='prenota-maestro.html'">
+                                        PRENOTA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>VALENTINA CELESTE</h4>
+                            <div class="maestro-rating-small">
+                                <i class="fas fa-star"></i> 4.9 <span>(19 commenti)</span>
+                            </div>
+                            <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Roccaraso</p>
+                            <p class="maestro-specialita"><img src="assets/img/Sci_acceso.png" alt="Sci"> Sci</p>
+                            <p class="maestro-tipo"><i class="fas fa-user-friends"></i> Singole e di gruppo</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Image Section -->
+        <section class="footer-image-section">
+            <div class="footer-image-background">
+                <div class="footer-image-placeholder">
+                    <!-- L'immagine sarà applicata tramite CSS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Include Container -->
+    <div id="footer-container"></div>
+
+    <!-- Include CSS generale + CSS specifico pagina -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/scelta-maestro.css">
+    
+    <!-- Include JavaScript -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/scelta-maestro.js"></script>
+</body>
+</html>

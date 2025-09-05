@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Le Mie Prenotazioni - Ski Teaching</title>
+    <!-- Head content will be loaded dynamically -->
+</head>
+<body class="area-utente-page">
+    <!-- Header Include Container -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- User Menu Dropdown (positioned after header loads) -->
+        <div class="user-dropdown-menu" id="userDropdown" style="display: none;">
+            <div class="dropdown-header">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-info">
+                    <p class="user-name">Mario Rossi</p>
+                    <p class="user-email">mario.rossi@email.com</p>
+                </div>
+            </div>
+            <ul class="dropdown-menu-list">
+                <li><a href="area-utente.html" class="active"><i class="fas fa-calendar-check"></i> Prenotazioni</a></li>
+                <li><a href="lezioni-passate.html"><i class="fas fa-history"></i> Lezioni passate</a></li>
+                <li><a href="profilo.html"><i class="fas fa-user-cog"></i> Profilo</a></li>
+                <li><a href="supporto.html"><i class="fas fa-headset"></i> Supporto</a></li>
+                <li class="divider"></li>
+                <li><a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Esci</a></li>
+            </ul>
+        </div>
+
+        <!-- Prenotazioni Section -->
+        <section class="prenotazioni-section">
+            <div class="prenotazioni-container">
+                <!-- Header con titolo e filtri -->
+                <div class="prenotazioni-header">
+                    <h1 class="prenotazioni-title">
+                        <i class="fas fa-mountain"></i>
+                        PRENOTAZIONI
+                    </h1>
+                    
+                    <!-- Filtri di stato -->
+                    <div class="filtri-stato">
+                        <button class="filtro-stato active" data-stato="tutti">
+                            Tutte <span class="count">(5)</span>
+                        </button>
+                        <button class="filtro-stato" data-stato="confermate">
+                            <span class="dot green"></span>
+                            Confermate <span class="count">(2)</span>
+                        </button>
+                        <button class="filtro-stato" data-stato="attesa">
+                            <span class="dot orange"></span>
+                            In attesa <span class="count">(2)</span>
+                        </button>
+                        <button class="filtro-stato" data-stato="rifiutate">
+                            <span class="dot red"></span>
+                            Rifiutate/Disdette <span class="count">(1)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Lista Prenotazioni -->
+                <div class="prenotazioni-list">
+                    
+                    <!-- SEZIONE CONFERMATE -->
+                    <div class="prenotazioni-group" data-stato="confermate">
+                        <h2 class="group-title">CONFERMATE</h2>
+                        
+                        <!-- Prenotazione 1 - Confermata -->
+                        <div class="prenotazione-card" data-stato="confermate">
+                            <div class="maestro-info-section">
+                                <div class="maestro-photo">
+                                    <img src="assets/img/maestro3-bn.jpg" alt="Megara Erin">
+                                </div>
+                                <div class="maestro-details">
+                                    <div class="stato-badge verde">LEZIONE CONFERMATA</div>
+                                    <h3 class="maestro-nome">MEGARA ERIN <span class="rating">⭐ 4.5</span></h3>
+                                    <div class="lezione-datetime">
+                                        <p class="data"><strong>12 FEBBRAIO</strong></p>
+                                        <p class="ora">ORE 13:30</p>
+                                    </div>
+                                    <div class="lezione-luogo">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Seggiovia Pizzalto - Roccaraso</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-section">
+                                <button class="btn-action btn-contatta">
+                                    <i class="fas fa-comment-dots"></i>
+                                    CONTATTA IL MAESTRO
+                                </button>
+                                <button class="btn-action btn-disdici">
+                                    <i class="fas fa-times-circle"></i>
+                                    DISDICI LA LEZIONE*
+                                </button>
+                                <p class="policy-note">*La lezione può essere annullata solo con 48 ore di preavviso</p>
+                            </div>
+                        </div>
+
+                        <!-- Prenotazione 2 - Confermata -->
+                        <div class="prenotazione-card" data-stato="confermate">
+                            <div class="maestro-info-section">
+                                <div class="maestro-photo">
+                                    <img src="assets/img/maestro1-bn.jpg" alt="Eric Prince">
+                                </div>
+                                <div class="maestro-details">
+                                    <div class="stato-badge verde">LEZIONE CONFERMATA</div>
+                                    <h3 class="maestro-nome">ERIC PRINCE <span class="rating">⭐ 4.8</span></h3>
+                                    <div class="lezione-datetime">
+                                        <p class="data"><strong>15 FEBBRAIO</strong></p>
+                                        <p class="ora">ORE 10:00</p>
+                                    </div>
+                                    <div class="lezione-luogo">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Campo Scuola - Roccaraso</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-section">
+                                <button class="btn-action btn-contatta">
+                                    <i class="fas fa-comment-dots"></i>
+                                    CONTATTA IL MAESTRO
+                                </button>
+                                <button class="btn-action btn-disdici">
+                                    <i class="fas fa-times-circle"></i>
+                                    DISDICI LA LEZIONE*
+                                </button>
+                                <p class="policy-note">*La lezione può essere annullata solo con 48 ore di preavviso</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SEZIONE IN ATTESA -->
+                    <div class="prenotazioni-group" data-stato="attesa">
+                        <h2 class="group-title">IN ATTESA</h2>
+                        
+                        <!-- Prenotazione 3 - In Attesa -->
+                        <div class="prenotazione-card" data-stato="attesa">
+                            <div class="maestro-info-section">
+                                <div class="maestro-photo">
+                                    <img src="assets/img/maestro2-bn.jpg" alt="John Smith">
+                                </div>
+                                <div class="maestro-details">
+                                    <div class="stato-badge arancione">IN ATTESA</div>
+                                    <h3 class="maestro-nome">MIKE DEAN <span class="rating">⭐ 4.6</span></h3>
+                                    <div class="lezione-datetime">
+                                        <p class="data"><strong>20 FEBBRAIO</strong></p>
+                                        <p class="ora">ORE 14:30</p>
+                                    </div>
+                                    <div class="lezione-luogo">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Seggiovia Pizzalto - Roccaraso</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-section">
+                                <button class="btn-action btn-contatta">
+                                    <i class="fas fa-comment-dots"></i>
+                                    CONTATTA IL MAESTRO
+                                </button>
+                                <button class="btn-action btn-disdici">
+                                    <i class="fas fa-times-circle"></i>
+                                    ANNULLA RICHIESTA
+                                </button>
+                                <p class="policy-note">In attesa di conferma da parte del maestro</p>
+                            </div>
+                        </div>
+
+                        <!-- Prenotazione 4 - In Attesa -->
+                        <div class="prenotazione-card" data-stato="attesa">
+                            <div class="maestro-info-section">
+                                <div class="maestro-photo">
+                                    <img src="assets/img/maestro3-bn.jpg" alt="Sofia Verde">
+                                </div>
+                                <div class="maestro-details">
+                                    <div class="stato-badge arancione">IN ATTESA</div>
+                                    <h3 class="maestro-nome">SOFIA VERDE <span class="rating">⭐ 4.9</span></h3>
+                                    <div class="lezione-datetime">
+                                        <p class="data"><strong>22 FEBBRAIO</strong></p>
+                                        <p class="ora">ORE 09:00</p>
+                                    </div>
+                                    <div class="lezione-luogo">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Campo Felice - Piste Blu</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-section">
+                                <button class="btn-action btn-contatta">
+                                    <i class="fas fa-comment-dots"></i>
+                                    CONTATTA IL MAESTRO
+                                </button>
+                                <button class="btn-action btn-disdici">
+                                    <i class="fas fa-times-circle"></i>
+                                    ANNULLA RICHIESTA
+                                </button>
+                                <p class="policy-note">In attesa di conferma da parte del maestro</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SEZIONE RIFIUTATE O DISDETTE -->
+                    <div class="prenotazioni-group" data-stato="rifiutate">
+                        <h2 class="group-title">RIFIUTATE O DISDETTE</h2>
+                        
+                        <!-- Prenotazione 5 - Rifiutata -->
+                        <div class="prenotazione-card" data-stato="rifiutate">
+                            <div class="maestro-info-section">
+                                <div class="maestro-photo">
+                                    <img src="assets/img/maestro1-bn.jpg" alt="Luca Bianchi">
+                                </div>
+                                <div class="maestro-details">
+                                    <div class="stato-badge rosso">RIFIUTATA</div>
+                                    <h3 class="maestro-nome">ELENA JONES <span class="rating">⭐ 5.0</span></h3>
+                                    <div class="lezione-datetime">
+                                        <p class="data"><strong>19 FEBBRAIO</strong></p>
+                                        <p class="ora">ORE 12:15</p>
+                                    </div>
+                                    <div class="lezione-luogo">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Seggiovia Pizzalto - Roccaraso</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-section">
+                                <button class="btn-action btn-contatta">
+                                    <i class="fas fa-comment-dots"></i>
+                                    CONTATTA IL MAESTRO
+                                </button>
+                                <button class="btn-action btn-cerca-altro" onclick="window.location.href='maestri.html'">
+                                    <i class="fas fa-search"></i>
+                                    CERCA UN ALTRO MAESTRO
+                                </button>
+                                <p class="policy-note">La lezione è stata rifiutata dal maestro - slot non disponibile</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Empty State (nascosto di default) -->
+                <div class="empty-state" id="emptyState" style="display: none;">
+                    <i class="fas fa-calendar-times"></i>
+                    <h3>Nessuna prenotazione trovata</h3>
+                    <p>Non hai prenotazioni che corrispondono ai filtri selezionati.</p>
+                    <button onclick="window.location.href='maestri.html'" class="btn-prenota-lezione">
+                        <i class="fas fa-plus-circle"></i>
+                        PRENOTA UNA LEZIONE
+                    </button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Include Container -->
+    <div id="footer-container"></div>
+
+    <!-- Include CSS generale + CSS specifico pagina -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/area-utente.css">
+    
+    <!-- Include JavaScript -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/area-utente.js"></script>
+</body>
+</html>

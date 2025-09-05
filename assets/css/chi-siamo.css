@@ -1,0 +1,613 @@
+/* ============================
+   CHI SIAMO PAGE STYLES
+   ============================ */
+
+/* Chi Siamo Hero Section */
+.chi-siamo-hero {
+    height: 80vh;
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.chi-siamo-hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.chi-siamo-hero-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.chi-siamo-hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding-bottom: 60px;
+}
+
+.chi-siamo-hero-title {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+}
+
+.chi-siamo-title-wrapper {
+    text-align: left;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+.chi-siamo-hero-title h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #3c3c3b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.chi-siamo-hero-title h1 .highlight {
+    color: #1380ad;
+}
+
+/* Testo dentro l'hero, sotto il titolo */
+.chi-siamo-hero .chi-siamo-text {
+    max-width: 600px;
+    margin-left: calc(100% - 875px);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out 1s forwards;
+}
+
+.chi-siamo-hero .chi-siamo-text p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+.chi-siamo-hero .chi-siamo-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Chi Siamo Content Section - Solo per foto centrale */
+.chi-siamo-content {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.chi-siamo-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.chi-siamo-image {
+    /* Immagine centrata a colonna unica */
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out 0.3s;
+    margin-bottom: 80px;
+}
+
+.chi-siamo-image.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.chi-siamo-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================
+   I NOSTRI VALORI SECTION
+   ============================ */
+
+.nostri-valori-section {
+    background-color: #ffffff;
+    padding: 100px 0;
+}
+
+.nostri-valori-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nostri-valori-header {
+    text-align: center;
+    margin-bottom: 80px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.nostri-valori-header.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nostri-valori-header h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.valori-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 80px;
+    position: relative;
+}
+
+/* Colonna sinistra */
+.valori-column-left {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Colonna destra - sfalzata di una riga */
+.valori-column-right {
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px; /* Sfalzamento di una riga */
+}
+
+.valore-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.valore-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.valore-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.valore-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.valore-content {
+    flex: 1;
+}
+
+.valore-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1380ad;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 5px 0 !important;
+    line-height: 1.2;
+}
+
+.valore-content p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.3;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+}
+
+.valore-separator {
+    width: 100%;
+    height: 3px;
+    background-color: #1380ad;
+    margin: 0;
+}
+
+/* Stagger animations */
+.valore-item:nth-child(1) { transition-delay: 0.1s; }
+.valore-item:nth-child(2) { transition-delay: 0.2s; }
+.valore-item:nth-child(3) { transition-delay: 0.3s; }
+.valore-item:nth-child(4) { transition-delay: 0.4s; }
+.valore-item:nth-child(5) { transition-delay: 0.5s; }
+
+.valori-column-right .valore-item:nth-child(1) { transition-delay: 0.3s; }
+.valori-column-right .valore-item:nth-child(2) { transition-delay: 0.4s; }
+.valori-column-right .valore-item:nth-child(3) { transition-delay: 0.5s; }
+.valori-column-right .valore-item:nth-child(4) { transition-delay: 0.6s; }
+.valori-column-right .valore-item:nth-child(5) { transition-delay: 0.7s; }
+
+/* ============================
+   FOTO FINALE SECTION
+   ============================ */
+
+.foto-finale-section {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.foto-finale-image {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.foto-finale-image.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.foto-finale-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    vertical-align: bottom; /* Rimuove spazio sotto l'immagine */
+}
+
+/* Header transparent for chi-siamo page */
+.chi-siamo-page .main-content {
+    margin-top: 0; /* Remove margin to overlay header on image */
+}
+
+.chi-siamo-page .header {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.chi-siamo-page .header .nav-link {
+    color: white;
+}
+
+.chi-siamo-page .header .logo img {
+    filter: brightness(0) invert(1);
+}
+
+.chi-siamo-page .header .btn-prenota {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+}
+
+.chi-siamo-page .header .btn-prenota:hover {
+    background-color: white;
+    color: #2196F3;
+}
+
+.chi-siamo-page .header .user-icon {
+    color: white;
+}
+
+.chi-siamo-page .header .mobile-menu-toggle span {
+    background-color: white;
+}
+
+/* Header scroll effect for chi-siamo page */
+.chi-siamo-page .header.scrolled {
+    background-color: white !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.chi-siamo-page .header.scrolled .nav-link {
+    color: #333 !important;
+}
+
+.chi-siamo-page .header.scrolled .logo img {
+    filter: none !important;
+}
+
+.chi-siamo-page .header.scrolled .btn-prenota {
+    background-color: #2196F3 !important;
+    color: white !important;
+    border: none !important;
+}
+
+.chi-siamo-page .header.scrolled .user-icon {
+    color: #333 !important;
+}
+
+.chi-siamo-page .header.scrolled .mobile-menu-toggle span {
+    background-color: #333 !important;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================
+   RESPONSIVE DESIGN
+   ============================ */
+
+@media (min-width: 1400px) {
+    .chi-siamo-hero .chi-siamo-text {
+        margin-left: calc(50% - 300px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .chi-siamo-hero-title h1 {
+        font-size: 3.5rem;
+    }
+    
+    .chi-siamo-hero .chi-siamo-text {
+        margin-left: calc(100% - 650px);
+        max-width: 500px;
+    }
+    
+    .chi-siamo-hero .chi-siamo-text p {
+        font-size: 1rem;
+    }
+    
+    /* Nostri Valori Responsive */
+    .nostri-valori-header h2 {
+        font-size: 3rem;
+    }
+    
+    .valori-grid {
+        gap: 0 60px;
+    }
+    
+    .valori-column-right {
+        margin-top: 100px;
+    }
+    
+    .valore-item {
+        margin-bottom: 50px;
+    }
+    
+    .valore-icon {
+        width: 55px;
+        height: 55px;
+        margin-right: 20px;
+    }
+    
+    .valore-icon img {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .valore-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .valore-content p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .chi-siamo-hero {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    .chi-siamo-hero-content {
+        padding-bottom: 40px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .chi-siamo-hero-title {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    
+    .chi-siamo-title-wrapper {
+        text-align: center;
+    }
+    
+    .chi-siamo-hero-title h1 {
+        font-size: 2.5rem;
+    }
+    
+    .chi-siamo-hero .chi-siamo-text {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        max-width: 90%;
+        padding: 0 20px;
+    }
+    
+    .chi-siamo-hero .chi-siamo-text p {
+        font-size: 1rem;
+    }
+    
+    .chi-siamo-content {
+        padding: 60px 0;
+    }
+    
+    .chi-siamo-image {
+        margin-bottom: 60px;
+    }
+    
+    /* Nostri Valori Mobile */
+    .nostri-valori-section {
+        padding: 80px 0;
+    }
+    
+    .nostri-valori-header {
+        margin-bottom: 60px;
+    }
+    
+    .nostri-valori-header h2 {
+        font-size: 2.5rem;
+    }
+    
+    .valori-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .valori-column-right {
+        margin-top: 0;
+    }
+    
+    .valore-item {
+        margin-bottom: 40px;
+    }
+    
+    .valore-icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 18px;
+    }
+    
+    .valore-icon img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .valore-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .valore-content p {
+        font-size: 0.95rem;
+    }
+    
+    /* Foto Finale responsive */
+    .foto-finale-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .chi-siamo-hero {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .chi-siamo-hero-content {
+        padding-bottom: 30px;
+    }
+    
+    .chi-siamo-hero-title h1 {
+        font-size: 2rem;
+    }
+    
+    .chi-siamo-hero-title {
+        margin-bottom: 20px;
+    }
+    
+    .chi-siamo-hero .chi-siamo-text {
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 15px;
+    }
+    
+    .chi-siamo-hero .chi-siamo-text p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    .chi-siamo-content {
+        padding: 40px 0;
+    }
+    
+    .chi-siamo-content-wrapper {
+        padding: 0 15px;
+    }
+    
+    .chi-siamo-image {
+        margin-bottom: 50px;
+    }
+    
+    /* Nostri Valori Mobile Small */
+    .nostri-valori-section {
+        padding: 60px 0;
+    }
+    
+    .nostri-valori-content {
+        padding: 0 15px;
+    }
+    
+    .nostri-valori-header {
+        margin-bottom: 50px;
+    }
+    
+    .nostri-valori-header h2 {
+        font-size: 2rem;
+    }
+    
+    .valore-item {
+        margin-bottom: 35px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .valore-icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 0;
+        margin-bottom: 15px;
+        align-self: center;
+    }
+    
+    .valore-icon img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .valore-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+    
+    .valore-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+}

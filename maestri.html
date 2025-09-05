@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Ski Teaching - I Maestri</title>
+    <!-- Head content will be loaded dynamically -->
+</head>
+<body class="maestri-page">
+    <!-- Header Include Container -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Maestri Hero Section -->
+        <section class="maestri-hero">
+            <div class="maestri-hero-content">
+                <div class="maestri-title animate-on-scroll">
+                    <h1>SCEGLI IL <span class="highlight">MAESTRO DI SCI</span><br>PERFETTO PER TE</h1>
+                </div>
+                
+                <div class="maestri-subtitle animate-on-scroll">
+                    <h2>Maestri di Sci Certificati per le tue lezioni Personalizzate</h2>
+                </div>
+                
+                <div class="maestri-description animate-on-scroll">
+                    <p>Clicca sulla foto del maestro di cui vuoi saperne di più.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Maestri Filtri e Grid Section -->
+        <section class="maestri-section">
+            <div class="maestri-container">
+                <!-- Sidebar Filtri -->
+                <aside class="filtri-sidebar">
+                    <div class="filtro-group">
+                        <h3><i class="fas fa-map-marker-alt"></i> FILTRA PER LOCALITÀ</h3>
+                        <div id="filtri-localita">
+                            <!-- Populated dynamically by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="filtro-group">
+                        <h3>FILTRA PER SPECIALITÀ</h3>
+                        <div class="filtro-options">
+                            <label class="filtro-option">
+                                <input type="checkbox" value="sci" class="filtro-specialita">
+                                <span class="checkmark"></span>
+                                Sci
+                            </label>
+                            <label class="filtro-option">
+                                <input type="checkbox" value="snowboard" class="filtro-specialita">
+                                <span class="checkmark"></span>
+                                Snowboard
+                            </label>
+                            <label class="filtro-option">
+                                <input type="checkbox" value="sci-snowboard" class="filtro-specialita">
+                                <span class="checkmark"></span>
+                                Sci e snowboard
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Grid Maestri -->
+                <div class="maestri-grid" id="maestri-grid">
+                    <!-- Maestro 1 -->
+                    <div class="maestro-card" data-localita="roccaraso" data-specialita="sci">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro1-bn.jpg" alt="Eric Prince">
+                            <div class="maestro-overlay">
+                                <button class="btn-scheda-maestro">SCHEDA MAESTRO</button>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>ERIC PRINCE</h4>
+                            <div class="maestro-details">
+                                <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Roccaraso</p>
+                                <p class="maestro-specialita">Sci</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 2 -->
+                    <div class="maestro-card" data-localita="roccaraso" data-specialita="snowboard">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro2-bn.jpg" alt="John Smith">
+                            <div class="maestro-overlay">
+                                <button class="btn-scheda-maestro">SCHEDA MAESTRO</button>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>JOHN SMITH</h4>
+                            <div class="maestro-details">
+                                <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Roccaraso</p>
+                                <p class="maestro-specialita">Snowboard</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 3 -->
+                    <div class="maestro-card" data-localita="roccaraso" data-specialita="sci-snowboard">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro3-bn.jpg" alt="Megara Erin">
+                            <div class="maestro-overlay">
+                                <button class="btn-scheda-maestro">SCHEDA MAESTRO</button>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>MEGARA ERIN</h4>
+                            <div class="maestro-details">
+                                <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Roccaraso</p>
+                                <p class="maestro-specialita">Sci e Snowboard</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 4 -->
+                    <div class="maestro-card" data-localita="marileva-1400" data-specialita="sci">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro2-bn.jpg" alt="Charming">
+                            <div class="maestro-overlay">
+                                <button class="btn-scheda-maestro">SCHEDA MAESTRO</button>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>CHARMING</h4>
+                            <div class="maestro-details">
+                                <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Marileva 1400</p>
+                                <p class="maestro-specialita">Sci</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 5 -->
+                    <div class="maestro-card" data-localita="roccaraso" data-specialita="sci">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro1-bn.jpg" alt="John Smith">
+                            <div class="maestro-overlay">
+                                <button class="btn-scheda-maestro">SCHEDA MAESTRO</button>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>JOHN SMITH</h4>
+                            <div class="maestro-details">
+                                <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Roccaraso</p>
+                                <p class="maestro-specialita">Sci</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 6 -->
+                    <div class="maestro-card" data-localita="marileva-1400" data-specialita="snowboard">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro3-bn.jpg" alt="Belle Books">
+                            <div class="maestro-overlay">
+                                <button class="btn-scheda-maestro">SCHEDA MAESTRO</button>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>BELLE BOOKS</h4>
+                            <div class="maestro-details">
+                                <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Marileva 1400</p>
+                                <p class="maestro-specialita">Snowboard</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 7 -->
+                    <div class="maestro-card" data-localita="campo-felice" data-specialita="sci-snowboard">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro1-bn.jpg" alt="Marco Rossi">
+                            <div class="maestro-overlay">
+                                <button class="btn-scheda-maestro">SCHEDA MAESTRO</button>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>MARCO ROSSI</h4>
+                            <div class="maestro-details">
+                                <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Campo Felice</p>
+                                <p class="maestro-specialita">Sci e Snowboard</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 8 -->
+                    <div class="maestro-card" data-localita="ovindoli" data-specialita="sci">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro2-bn.jpg" alt="Luca Bianchi">
+                            <div class="maestro-overlay">
+                                <button class="btn-scheda-maestro">SCHEDA MAESTRO</button>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>LUCA BIANCHI</h4>
+                            <div class="maestro-details">
+                                <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Ovindoli</p>
+                                <p class="maestro-specialita">Sci</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 9 -->
+                    <div class="maestro-card" data-localita="campo-felice" data-specialita="snowboard">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro3-bn.jpg" alt="Sofia Verde">
+                            <div class="maestro-overlay">
+                                <button class="btn-scheda-maestro">SCHEDA MAESTRO</button>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>SOFIA VERDE</h4>
+                            <div class="maestro-details">
+                                <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Campo Felice</p>
+                                <p class="maestro-specialita">Snowboard</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 10 -->
+                    <div class="maestro-card" data-localita="roccaraso" data-specialita="sci">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro1-bn.jpg" alt="Andrea Neri">
+                            <div class="maestro-overlay">
+                                <button class="btn-scheda-maestro">SCHEDA MAESTRO</button>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>ANDREA NERI</h4>
+                            <div class="maestro-details">
+                                <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Roccaraso</p>
+                                <p class="maestro-specialita">Sci</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 11 -->
+                    <div class="maestro-card" data-localita="marileva-1400" data-specialita="sci-snowboard">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro2-bn.jpg" alt="Giulia Blu">
+                            <div class="maestro-overlay">
+                                <button class="btn-scheda-maestro">SCHEDA MAESTRO</button>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>GIULIA BLU</h4>
+                            <div class="maestro-details">
+                                <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Marileva 1400</p>
+                                <p class="maestro-specialita">Sci e Snowboard</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 12 -->
+                    <div class="maestro-card" data-localita="ovindoli" data-specialita="snowboard">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro3-bn.jpg" alt="Matteo Oro">
+                            <div class="maestro-overlay">
+                                <button class="btn-scheda-maestro">SCHEDA MAESTRO</button>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>MATTEO ORO</h4>
+                            <div class="maestro-details">
+                                <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Ovindoli</p>
+                                <p class="maestro-specialita">Snowboard</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 13 -->
+                    <div class="maestro-card" data-localita="campo-felice" data-specialita="sci">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro1-bn.jpg" alt="Francesco Viola">
+                            <div class="maestro-overlay">
+                                <button class="btn-scheda-maestro">SCHEDA MAESTRO</button>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>FRANCESCO VIOLA</h4>
+                            <div class="maestro-details">
+                                <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Campo Felice</p>
+                                <p class="maestro-specialita">Sci</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 14 -->
+                    <div class="maestro-card" data-localita="roccaraso" data-specialita="sci-snowboard">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro2-bn.jpg" alt="Chiara Rosa">
+                            <div class="maestro-overlay">
+                                <button class="btn-scheda-maestro">SCHEDA MAESTRO</button>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>CHIARA ROSA</h4>
+                            <div class="maestro-details">
+                                <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Roccaraso</p>
+                                <p class="maestro-specialita">Sci e Snowboard</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 15 -->
+                    <div class="maestro-card" data-localita="marileva-1400" data-specialita="sci">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro3-bn.jpg" alt="Davide Grigio">
+                            <div class="maestro-overlay">
+                                <button class="btn-scheda-maestro">SCHEDA MAESTRO</button>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>DAVIDE GRIGIO</h4>
+                            <div class="maestro-details">
+                                <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Marileva 1400</p>
+                                <p class="maestro-specialita">Sci</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 16 -->
+                    <div class="maestro-card" data-localita="ovindoli" data-specialita="snowboard">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro1-bn.jpg" alt="Elena Argento">
+                            <div class="maestro-overlay">
+                                <button class="btn-scheda-maestro">SCHEDA MAESTRO</button>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>ELENA ARGENTO</h4>
+                            <div class="maestro-details">
+                                <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Ovindoli</p>
+                                <p class="maestro-specialita">Snowboard</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 17 -->
+                    <div class="maestro-card" data-localita="campo-felice" data-specialita="sci-snowboard">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro2-bn.jpg" alt="Roberto Marrone">
+                            <div class="maestro-overlay">
+                                <button class="btn-scheda-maestro">SCHEDA MAESTRO</button>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>ROBERTO MARRONE</h4>
+                            <div class="maestro-details">
+                                <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Campo Felice</p>
+                                <p class="maestro-specialita">Sci e Snowboard</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maestro 18 -->
+                    <div class="maestro-card" data-localita="roccaraso" data-specialita="sci">
+                        <div class="maestro-image">
+                            <img src="assets/img/maestro3-bn.jpg" alt="Valentina Celeste">
+                            <div class="maestro-overlay">
+                                <button class="btn-scheda-maestro">SCHEDA MAESTRO</button>
+                            </div>
+                        </div>
+                        <div class="maestro-info">
+                            <h4>VALENTINA CELESTE</h4>
+                            <div class="maestro-details">
+                                <p class="maestro-localita"><i class="fas fa-map-marker-alt"></i> Roccaraso</p>
+                                <p class="maestro-specialita">Sci</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- *** NUOVA SEZIONE IMMAGINE SOPRA FOOTER *** -->
+        <section class="footer-image-section">
+            <div class="footer-image-background">
+                <div class="footer-image-placeholder">
+                    <!-- L'immagine sarà applicata tramite CSS background-image -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Include Container -->
+    <div id="footer-container"></div>
+
+    <!-- Include CSS generale + CSS specifico pagina -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/maestri.css">
+    
+    <!-- Include JavaScript -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/maestri-filters.js"></script>
+</body>
+</html>

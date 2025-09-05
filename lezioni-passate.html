@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Lezioni Passate - Ski Teaching</title>
+    <!-- Head content will be loaded dynamically -->
+</head>
+<body class="area-utente-page">
+    <!-- Header Include Container -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- User Menu Dropdown (positioned after header loads) -->
+        <div class="user-dropdown-menu" id="userDropdown" style="display: none;">
+            <div class="dropdown-header">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-info">
+                    <p class="user-name">Mario Rossi</p>
+                    <p class="user-email">mario.rossi@email.com</p>
+                </div>
+            </div>
+            <ul class="dropdown-menu-list">
+                <li><a href="area-utente.html"><i class="fas fa-calendar-check"></i> Prenotazioni</a></li>
+                <li><a href="lezioni-passate.html" class="active"><i class="fas fa-history"></i> Lezioni passate</a></li>
+                <li><a href="profilo.html"><i class="fas fa-user-cog"></i> Profilo</a></li>
+                <li><a href="supporto.html"><i class="fas fa-headset"></i> Supporto</a></li>
+                <li class="divider"></li>
+                <li><a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Esci</a></li>
+            </ul>
+        </div>
+
+        <!-- Lezioni Passate Section -->
+        <section class="lezioni-passate-section">
+            <div class="lezioni-container">
+                <!-- Header con titolo -->
+                <div class="lezioni-header">
+                    <h1 class="lezioni-title">
+                        <i class="fas fa-skiing"></i>
+                        LEZIONI PASSATE
+                    </h1>
+                    <p class="lezioni-subtitle">Ecco il riepilogo delle tue lezioni completate</p>
+                </div>
+
+                <!-- Tabella Lezioni -->
+                <div class="lezioni-table-wrapper">
+                    <table class="lezioni-table">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Giorno e ora</th>
+                                <th>Luogo</th>
+                                <th>Valuta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Lezione 1 - Da valutare -->
+                            <tr class="lezione-row">
+                                <td class="maestro-cell">
+                                    <div class="maestro-info">
+                                        <div class="maestro-avatar">
+                                            <img src="assets/img/maestro3-bn.jpg" alt="Megara Erin">
+                                        </div>
+                                        <div class="maestro-text">
+                                            <span class="maestro-name">MEGARA ERIN</span>
+                                            <span class="maestro-rating">⭐ 4.5</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="datetime-cell">
+                                    <div class="datetime-info">
+                                        <span class="date">12 FEBBRAIO</span>
+                                        <span class="time">ORE 13:30</span>
+                                    </div>
+                                </td>
+                                <td class="location-cell">
+                                    <div class="location-info">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Seggiovia Pizzalto<br>Roccaraso</span>
+                                    </div>
+                                </td>
+                                <td class="action-cell">
+                                    <button class="btn-valuta" data-maestro="Megara Erin">
+                                        VALUTA ⭐
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <!-- Lezione 2 - Già valutata -->
+                            <tr class="lezione-row">
+                                <td class="maestro-cell">
+                                    <div class="maestro-info">
+                                        <div class="maestro-avatar">
+                                            <img src="assets/img/maestro1-bn.jpg" alt="Eric Prince">
+                                        </div>
+                                        <div class="maestro-text">
+                                            <span class="maestro-name">MEGARA ERIN</span>
+                                            <span class="maestro-rating">⭐ 4.5</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="datetime-cell">
+                                    <div class="datetime-info">
+                                        <span class="date">12 FEBBRAIO</span>
+                                        <span class="time">ORE 13:30</span>
+                                    </div>
+                                </td>
+                                <td class="location-cell">
+                                    <div class="location-info">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Seggiovia Pizzalto<br>Roccaraso</span>
+                                    </div>
+                                </td>
+                                <td class="action-cell">
+                                    <div class="valutato-badge">
+                                        <span class="valutato-text">VALUTATO</span>
+                                        <span class="valutato-rating">⭐ 4.2</span>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Lezione 3 - Annullata -->
+                            <tr class="lezione-row annullata">
+                                <td class="maestro-cell">
+                                    <div class="maestro-info">
+                                        <div class="maestro-avatar">
+                                            <img src="assets/img/maestro2-bn.jpg" alt="Mike Dean">
+                                        </div>
+                                        <div class="maestro-text">
+                                            <span class="maestro-name">MEGARA ERIN</span>
+                                            <span class="maestro-rating">⭐ 4.5</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="datetime-cell">
+                                    <div class="datetime-info">
+                                        <span class="date">12 FEBBRAIO</span>
+                                        <span class="time">ORE 13:30</span>
+                                    </div>
+                                </td>
+                                <td class="location-cell">
+                                    <div class="location-info">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Seggiovia Pizzalto<br>Roccaraso</span>
+                                    </div>
+                                </td>
+                                <td class="action-cell">
+                                    <span class="annullato-badge">ANNULLATO</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+
+                <!-- Empty State (nascosto di default) -->
+                <div class="empty-state" id="emptyState" style="display: none;">
+                    <i class="fas fa-skiing-nordic"></i>
+                    <h3>Nessuna lezione completata</h3>
+                    <p>Non hai ancora completato nessuna lezione. Prenota la tua prima lezione!</p>
+                    <button onclick="window.location.href='maestri.html'" class="btn-prenota-lezione">
+                        <i class="fas fa-plus-circle"></i>
+                        PRENOTA UNA LEZIONE
+                    </button>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="pagination-btn prev" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <span class="pagination-info">Pagina 1 di 1</span>
+                    <button class="pagination-btn next" disabled>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Valutazione -->
+        <div class="modal-overlay" id="modalValutazione" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Valuta la tua esperienza</h2>
+                    <button class="modal-close" id="closeModal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="valutazione-maestro">
+                        <img src="" alt="" id="modalMaestroImg">
+                        <h3 id="modalMaestroName"></h3>
+                    </div>
+                    
+                    <div class="rating-section">
+                        <label>Come valuti la tua lezione?</label>
+                        <div class="star-rating">
+                            <span class="star" data-value="1">⭐</span>
+                            <span class="star" data-value="2">⭐</span>
+                            <span class="star" data-value="3">⭐</span>
+                            <span class="star" data-value="4">⭐</span>
+                            <span class="star" data-value="5">⭐</span>
+                        </div>
+                        <span class="rating-value">0/5</span>
+                    </div>
+                    
+                    <div class="comment-section">
+                        <label for="comment">Lascia un commento (opzionale)</label>
+                        <textarea id="comment" rows="4" placeholder="Racconta la tua esperienza..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-cancel" id="cancelValutazione">Annulla</button>
+                    <button class="btn-submit" id="submitValutazione">Invia Valutazione</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Include Container -->
+    <div id="footer-container"></div>
+
+    <!-- Include CSS generale + CSS specifico pagina -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/area-utente.css">
+    <link rel="stylesheet" href="assets/css/lezioni-passate.css">
+    
+    <!-- Include JavaScript -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/area-utente.js"></script>
+    <script src="assets/js/lezioni-passate.js"></script>
+</body>
+</html>

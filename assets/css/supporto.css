@@ -1,0 +1,524 @@
+/* SUPPORTO PAGE STYLES */
+
+/* Section Container */
+.supporto-section {
+    padding: 60px 0;
+    min-height: calc(100vh - 80px);
+    background-color: #edf8fc;
+}
+
+.supporto-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.supporto-header {
+    background-color: transparent;
+    padding: 30px 0;
+    margin-bottom: 40px;
+}
+
+.supporto-title {
+    font-family: 'Oswald', sans-serif;
+    color: #1380ad;
+    text-transform: uppercase;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.faq-icon {
+    width: 85px;
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.title-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    gap: 5px;
+}
+
+.title-small {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #1380ad;
+}
+
+.title-large {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #1380ad;
+}
+
+/* Contact Info Section */
+.contact-info-section {
+    background-color: white;
+    padding: 30px 50px;
+    margin-bottom: 60px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.contact-cards {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    align-items: center;
+    gap: 0;
+}
+
+.contact-card {
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-card:first-child {
+    justify-content: flex-start;
+}
+
+.contact-card:last-child {
+    justify-content: flex-start;
+}
+
+.contact-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.contact-value {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-value a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-value a:hover {
+    color: #1380ad;
+}
+
+.divider-vertical {
+    width: 1px;
+    height: 40px;
+    background-color: #1380ad;
+    justify-self: center;
+}
+
+/* FAQ Section - UPDATED */
+.faq-section {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.faq-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1380ad;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 40px 0;
+    text-align: center;
+    padding: 0;
+    border: none;
+}
+
+/* Accordion Styles - UPDATED */
+.faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.accordion-item {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-item:hover {
+    box-shadow: 0 4px 15px rgba(19, 128, 173, 0.12);
+    transform: translateY(-2px);
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 25px 30px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.accordion-header:hover {
+    background-color: rgba(19, 128, 173, 0.03);
+}
+
+.accordion-header[aria-expanded="true"] {
+    background-color: white;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.accordion-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.accordion-header[aria-expanded="true"] .accordion-title {
+    color: #1380ad;
+}
+
+.accordion-icon {
+    color: #1380ad;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.accordion-header[aria-expanded="true"] .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: white;
+}
+
+.accordion-content.active {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+}
+
+.accordion-body {
+    padding: 25px 30px 30px 30px;
+    background-color: white;
+    border-top: none;
+}
+
+.accordion-body p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Additional Help Section */
+.additional-help {
+    margin-top: 60px;
+}
+
+.help-card {
+    background: linear-gradient(135deg, #1380ad 0%, #0f5a7a 100%);
+    color: white;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(19, 128, 173, 0.2);
+    border-radius: 10px;
+}
+
+.help-card i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.help-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.help-card p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0 0 30px 0;
+    opacity: 0.95;
+}
+
+.btn-contact-support {
+    background-color: white;
+    color: #1380ad;
+    border: none;
+    padding: 15px 35px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.btn-contact-support:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+}
+
+.btn-contact-support i {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .supporto-header {
+        padding: 20px 0;
+    }
+    
+    .supporto-title {
+        gap: 15px;
+    }
+    
+    .faq-icon {
+        width: 60px;
+    }
+    
+    .title-small {
+        font-size: 1.6rem;
+    }
+    
+    .title-large {
+        font-size: 2.5rem;
+    }
+    
+    .contact-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .contact-card {
+        padding: 0;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+    
+    .divider-vertical {
+        width: 100px;
+        height: 1px;
+        align-self: center;
+    }
+    
+    .contact-info-section {
+        padding: 30px 20px;
+        margin-bottom: 40px;
+    }
+    
+    .faq-section {
+        padding: 0;
+    }
+    
+    .faq-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .faq-accordion {
+        gap: 15px;
+    }
+    
+    .accordion-header {
+        padding: 20px;
+    }
+    
+    .accordion-title {
+        font-size: 1rem;
+    }
+    
+    .accordion-body {
+        padding: 20px;
+    }
+    
+    .accordion-body p {
+        font-size: 0.95rem;
+    }
+    
+    .help-card {
+        padding: 40px 20px;
+    }
+    
+    .help-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .help-card p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .supporto-container {
+        padding: 0 15px;
+    }
+    
+    .supporto-header {
+        padding: 15px 0;
+        margin-bottom: 30px;
+    }
+    
+    .supporto-title {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .faq-icon {
+        width: 50px;
+    }
+    
+    .title-text {
+        width: 100%;
+    }
+    
+    .title-small {
+        font-size: 1.3rem;
+    }
+    
+    .title-large {
+        font-size: 2rem;
+    }
+    
+    .contact-info-section {
+        padding: 25px 20px;
+        margin-bottom: 35px;
+        border-radius: 8px;
+    }
+    
+    .contact-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .contact-card {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+    }
+    
+    .divider-vertical {
+        display: none;
+    }
+    
+    .contact-label {
+        font-size: 0.9rem;
+    }
+    
+    .contact-value a {
+        font-size: 1rem;
+    }
+    
+    .faq-section {
+        margin-bottom: 35px;
+    }
+    
+    .faq-title {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    
+    .faq-accordion {
+        gap: 12px;
+    }
+    
+    .accordion-item {
+        border-radius: 8px;
+    }
+    
+    .accordion-header {
+        padding: 15px 18px;
+    }
+    
+    .accordion-title {
+        font-size: 0.9rem;
+        padding-right: 10px;
+    }
+    
+    .accordion-icon {
+        font-size: 1rem;
+    }
+    
+    .accordion-body {
+        padding: 15px 18px 20px 18px;
+    }
+    
+    .accordion-body p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .additional-help {
+        margin-top: 40px;
+    }
+    
+    .help-card {
+        padding: 30px 15px;
+        border-radius: 8px;
+    }
+    
+    .help-card i {
+        font-size: 2.5rem;
+    }
+    
+    .help-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .help-card p {
+        font-size: 0.95rem;
+    }
+    
+    .btn-contact-support {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+}
